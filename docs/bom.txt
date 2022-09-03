@@ -1,2 +1,4 @@
 https://www.newark.com/microchip/attiny841-ssu/mcu-8bit-attiny-16mhz-soic-14/dp/27X8554?CMP=AFC-OP
+https://octopart.com/attiny841-ssu-microchip-77762298
 
+https://en.wikipedia.org/wiki/ATtiny_microcontroller_comparison_chart
