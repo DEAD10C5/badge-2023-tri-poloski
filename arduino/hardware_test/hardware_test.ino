@@ -1,7 +1,21 @@
+#include <Arduino.h>
 #include <TinyMPU6050.h>
 
+/*
+ *  Constructing MPU-6050
+ */
+MPU6050 mpu (Wire);
+
 void setup() {
-  // put your setup code here, to run once:
+  // Initialization
+  mpu.Initialize();
+
+  // Calibration
+  Serial.begin(9600);
+  Serial.println("=====================================");
+  Serial.println("Starting calibration...");
+  mpu.Calibrate();
+  Serial.println("Calibration complete!");
 
 }
 
