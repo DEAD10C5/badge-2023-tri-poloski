@@ -6,7 +6,7 @@
 
   (paper "A4")
   (title_block
-    (title "гопник")
+    (title "гопник badge")
     (date "2022-09-02")
     (rev "v0.1")
     (company "DE:AD:10:C5")
