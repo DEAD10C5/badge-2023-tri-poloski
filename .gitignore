@@ -18,7 +18,7 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
-\#auto_saved_files#
+fp-lib-table
 report.txt
 
 # Netlist files (exported from Eeschema)
