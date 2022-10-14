@@ -10,7 +10,7 @@
   - Install version 1.5.2 or later.
 - Select one of the ATTiny 441/841 board types.
 
-## Libraries 
+## Libraries
 
 - [ATTinyCore Universal](https://github.com/SpenceKonde/ATTinyCore)
 - [TinyMPU6050](https://github.com/gabriel-milan/TinyMPU6050)
