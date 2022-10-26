@@ -1,4 +1,22 @@
-https://www.newark.com/microchip/attiny841-ssu/mcu-8bit-attiny-16mhz-soic-14/dp/27X8554?CMP=AFC-OP
+# Bill of Materials
+
+## microchip
+
+https://www.digikey.com/en/products/detail/microchip-technology/ATTINY841-SSU/4437435
 https://octopart.com/attiny841-ssu-microchip-77762298
 
 https://en.wikipedia.org/wiki/ATtiny_microcontroller_comparison_chart
+
+## resistors
+
+Three 1206 330 Ohm per board
+
+## LED
+
+Twelve 1206 LED per board
+https://www.digikey.com/en/products/detail/inolux/IN-S126AT5UW/7604902
+
+## accelerometer
+
+one MPU 6050 per board
+
