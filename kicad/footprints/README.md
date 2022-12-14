@@ -2,9 +2,8 @@
 
 ## Footprints
 
-These are used on the PCB. 
+These are used on the PCB.
 
 ## Symbols
 
 These are used on the schematic.
-
