@@ -1,6 +1,9 @@
 # Docs go here
 
-## Routing 
+Generate the Gerbers like so:
+`bash kicad-exports -c docs/gerbers.kibot.yaml -d docs -b kicad/adidas.kicad_pcb -e kicad/adidas.kicad_sch`
+
+## Routing
 
 [FreeRouting](https://github.com/freerouting/freerouting)
 

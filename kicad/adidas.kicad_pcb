@@ -114,29 +114,6 @@
   (net 29 "Net-(U2-Pad3)")
   (net 30 "Net-(U2-Pad5)")
 
-  (footprint "MountingHole:MountingHole_4.5mm" (layer "F.Cu")
-    (tedit 56D1B4CB) (tstamp 1aa930db-86c1-4d81-9057-417dbb86a596)
-    (at 165 49.4)
-    (descr "Mounting Hole 4.5mm, no annular")
-    (tags "mounting hole 4.5mm no annular")
-    (attr board_only exclude_from_pos_files exclude_from_bom)
-    (fp_text reference "REF**" (at 0 -5.5) (layer "F.SilkS") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 84adb196-69cf-44bf-8713-7038adaf3c7b)
-    )
-    (fp_text value "MountingHole_4.5mm" (at 0 5.5) (layer "F.Fab") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 78d96587-d4dc-4592-ab28-14ed700dd0ee)
-    )
-    (fp_text user "${REFERENCE}" (at 0 0) (layer "F.Fab") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 90a7cfa7-a909-4783-9950-0cbece26c0bc)
-    )
-    (fp_circle (center 0 0) (end 4.5 0) (layer "Cmts.User") (width 0.15) (fill none) (tstamp 9f0f16b8-c9bf-4a58-b3c8-6d463152a2ac))
-    (fp_circle (center 0 0) (end 4.75 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp e60775ca-3684-48b4-9507-427546043133))
-    (pad "" np_thru_hole circle (at 0 0) (size 4.5 4.5) (drill 4.5) (layers *.Cu *.Mask) (tstamp 3df23f90-104a-4a81-a300-de64a70ab92d))
-  )
-
   (footprint "Adidas:Adidas_Logo" (layer "F.Cu")
     (tedit 0) (tstamp 262156fc-5eaf-4470-87cd-d4e4c077d6eb)
     (at 165.1 91.44)
@@ -858,6 +835,29 @@
       (net 5 "Net-(D10-Pad+)") (pintype "passive") (tstamp 6e3e506e-869d-46b3-ac75-bcc3c0e2e9b5))
     (pad "-" smd rect locked (at 1.51 0) (size 1.01 1.73) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 2 "GND") (pintype "passive") (tstamp 1d20bcde-1b1e-47c3-8dc9-a854846a4ba2))
+  )
+
+  (footprint "MountingHole:MountingHole_4.5mm" (layer "F.Cu")
+    (tedit 56D1B4CB) (tstamp ca28bf7e-70e8-4d31-bf07-4a7785bc7121)
+    (at 165.0492 47.3456)
+    (descr "Mounting Hole 4.5mm, no annular")
+    (tags "mounting hole 4.5mm no annular")
+    (attr exclude_from_pos_files exclude_from_bom)
+    (fp_text reference "REF**" (at 0 -5.5) (layer "F.SilkS") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+      (tstamp 24ec4754-5bab-49d7-adc6-68cf11707ea6)
+    )
+    (fp_text value "MountingHole_4.5mm" (at 0 5.5) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+      (tstamp d82ba2f8-c07e-4295-95a1-4189d7ec6c17)
+    )
+    (fp_text user "${REFERENCE}" (at 0 0) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+      (tstamp a94651dc-3272-4e56-ba9e-74c4f653e49a)
+    )
+    (fp_circle (center 0 0) (end 4.5 0) (layer "Cmts.User") (width 0.15) (fill none) (tstamp 18050047-e048-4691-8c09-e4c592cf9946))
+    (fp_circle (center 0 0) (end 4.75 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp fb721c3d-8181-46b5-941f-f77b2d0f7d92))
+    (pad "" np_thru_hole circle (at 0 0) (size 4.5 4.5) (drill 4.5) (layers *.Cu *.Mask) (tstamp cc29a019-5551-4cfe-ba52-1eefbf922881))
   )
 
   (footprint "1206_smt:LEDC3216X120N" (layer "F.Cu")
