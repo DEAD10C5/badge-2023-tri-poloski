@@ -2,11 +2,11 @@
   (layer "F.Cu")
   (tedit 631279BF)
   (attr through_hole)
-  (fp_text reference "REF**" (at 1.17756 -3.64297) (layer "F.SilkS")
+  (fp_text reference "REF**" (at 1.17756 -3.64297) (layer "F.SilkS") hide
     (effects (font (size 1.002189 1.002189) (thickness 0.15)))
     (tstamp d4e2c51f-99aa-4804-9792-2269af0381d3)
   )
-  (fp_text value "QFN50P400X400X95-24N" (at 10.71558 3.369915) (layer "F.Fab")
+  (fp_text value "QFN50P400X400X95-24N" (at 10.71558 3.369915) (layer "F.Fab") hide
     (effects (font (size 1.001457 1.001457) (thickness 0.15)))
     (tstamp b4b78e8f-9318-4ee7-aa1c-f91556bc14a0)
   )

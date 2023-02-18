@@ -2,7 +2,7 @@
   (layer "F.Cu")
   (tedit 0)
   (attr board_only exclude_from_pos_files exclude_from_bom)
-  (fp_text reference "G***" (at 0 0) (layer "F.SilkS")
+  (fp_text reference "G***" (at 0 0) (layer "F.SilkS") hide
     (effects (font (size 1.524 1.524) (thickness 0.3)))
     (tstamp df01de51-69af-495a-9f3c-f670cffec5a6)
   )
