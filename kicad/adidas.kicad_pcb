@@ -119,8 +119,8 @@
     (at 165 49.4)
     (descr "Mounting Hole 4.5mm, no annular")
     (tags "mounting hole 4.5mm no annular")
-    (attr exclude_from_pos_files exclude_from_bom)
-    (fp_text reference "REF**" (at 0 -5.5) (layer "F.SilkS")
+    (attr board_only exclude_from_pos_files exclude_from_bom)
+    (fp_text reference "REF**" (at 0 -5.5) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 84adb196-69cf-44bf-8713-7038adaf3c7b)
     )
@@ -128,7 +128,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 78d96587-d4dc-4592-ab28-14ed700dd0ee)
     )
-    (fp_text user "${REFERENCE}" (at 0 0) (layer "F.Fab")
+    (fp_text user "${REFERENCE}" (at 0 0) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 90a7cfa7-a909-4783-9950-0cbece26c0bc)
     )
@@ -1847,7 +1847,7 @@
     (effects (font (size 0.6 0.6) (thickness 0.15)) (justify mirror))
   )
   (gr_text "THE @DEAD10C5 LOVE YOU!!\n@p0lr_ - Eddie the Yeti\nyaya_pancho - @5l0w0n3\n@thedevilsvoice " (at 228.6508 78.4352) (layer "B.SilkS") (tstamp 6689992d-d32d-456b-a234-e03c719270eb)
-    (effects (font (size 0.5 0.5) (thickness 0.1)) (justify mirror))
+    (effects (font (size 0.3 0.3) (thickness 0.075)) (justify mirror))
   )
   (gr_text "MISO" (at 122.8344 100.076 90) (layer "B.SilkS") (tstamp 6df46343-27a0-4ff7-863f-776bbf7b77fb)
     (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror))
