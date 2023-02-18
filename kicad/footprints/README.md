@@ -1,10 +1,4 @@
-# Footprints and Symbols
+# Footprints
 
-## Footprints
-
-These are used on the PCB. 
-
-## Symbols
-
-These are used on the schematic.
-
+* These are the `*.mod` and `*.kicad_mod` files used on the PCB.
+* Libraries have the `*.pretty` extension.

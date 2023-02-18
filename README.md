@@ -4,9 +4,10 @@
 
 ## Created by
 
+- Concept: Yaya Pancho
 - Translations: @muscovitebob
-- Hardware: Yaya Pancho @p0lr_ @thedevilsvoice
-- Software: Yaya Pancho @thedevilsvoice
+- Hardware: @p0lr_ @thedevilsvoice
+- Software: @thedevilsvoice
 
 ## гопник badge - Путин хуйло
 
