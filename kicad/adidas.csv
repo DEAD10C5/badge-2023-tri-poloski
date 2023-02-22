@@ -1,9 +1,16 @@
-"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
-1;"D2,D5,D12,D4,D6,D10,D8,D9,D11,D3,D7,D1";"LEDC3216X120N";12;"LHN974";;;
-2;"R3,R2,R1";"R_1206_3216Metric_Pad1.30x1.75mm_HandSolder";3;"R";;;
-3;"J2";"TestPoint_2Pads_Pitch2.54mm_Drill0.8mm";1;"Conn_01x02_Female";;;
-4;"BT1";"BatteryHolder_Keystone_3002_1x2032";1;"Battery_Cell";;;
-5;"U2";"SOIC127P599X175-14N";1;"ATTINY841-SSU";;;
-6;"J3";"PinHeader_2x03_P2.54mm_Vertical";1;"SAO Header";;;
-7;"J1";"PinHeader_2x03_P2.54mm_Vertical";1;"ISP Header";;;
-8;"U1";"QFN50P400X400X95-24N";1;"MPU-6050";;;
+"Source:","/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/kicad/adidas.kicad_sch"
+"Date:","Wed 22 Feb 2023 11:25:10 AM EST"
+"Tool:","Eeschema 7.0.0-da2b9df05c~165~ubuntu22.04.1"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","28"
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","DNP","A1_MIN","AVAILABILITY","A_MAX","A_MIN","A_NOM","B_MAX","B_MIN","B_NOM","D2_MAX","DESCRIPTION","D_MAX","D_MIN","D_NOM","E1_MAX","E1_MIN","E1_NOM","E2_MAX","ENOM","E_MAX","E_MIN","E_NOM","L_MAX","L_MIN","L_NOM","MANUFACTURER","MAXIMUM_PACKAGE_HEIGHT","MF","MP","PACKAGE","PARTREV","PIN_COUNT","PRICE","STANDARD","purpose"
+"1","11","D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D12","LHN974","dead10c5:LED-SMD-0805","LED_SMD:LED_0805_2012Metric","","","","","","","","","","","","","","","","","","","","","","","","","","","","Valcon","0.8mm","","","","A","","","Manufacturer Recommendations",""
+"2","1","D11","~","dead10c5:LED-SMD-0805","LED_SMD:LED_0805_2012Metric","","","","","","","","","","","","","","","","","","","","","","","","","","","","Valcon","0.8mm","","","","A","","","Manufacturer Recommendations",""
+"3","12","R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12","220Ω","Device:R","Resistor_SMD:R_1206_3216Metric","~","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"4","1","R13","10kΩ","Device:R","Resistor_SMD:R_1206_3216Metric","~","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"5","1","S1","B3F-1000","dead10c5:B3F-1000","DEAD10C5:SW_B3F-1000","","","","","","","","","","","","","","","","","","","","","","","","","","","","Omron","","","","","","","","","RESET"
+"6","1","U1","MPU-6050","MPU-6050:MPU-6050","DEAD10C5:QFN50P400X400X95-24N","","","","","Good","","","","","","","","IMU ACCEL/GYRO 3-AXIS I2C 24QFN","","","","","","","","","","","","","","","","","TDK","MPU-6050","QFN-24 InvenSense","3.4","","5.45 USD","IPC-7351B",""
+"7","1","U2","ATTINY841-SSU","ATTINY841-SSU:ATTINY841-SSU","DEAD10C5:SOIC127P599X175-14N","","","","0.1","","1.75","1.75","1.75","0.5","0.33","0.415","0.0","","8.74","8.55","8.645","3.99","3.8","3.895","0.0","1.27","6.19","5.8","5.995","1.27","0.41","0.84","Microchip","1.75mm","","","","A","14.0","","IPC 7351B",""

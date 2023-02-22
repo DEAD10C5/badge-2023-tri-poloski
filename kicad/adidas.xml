@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/franklin/workspace/badge/badge-2023-tri-poloski/kicad/adidas.kicad_sch</source>
-    <date>Sat 15 Oct 2022 01:19:06 PM EDT</date>
-    <tool>Eeschema 6.0.8-f2edbf62ab~116~ubuntu22.04.1</tool>
+    <source>/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/kicad/adidas.kicad_sch</source>
+    <date>Date1</date>
+    <tool>Eeschema 7.0.0-da2b9df05c~165~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>гопник badge</title>
         <company>DE:AD:10:C5</company>
-        <rev>v0.1</rev>
-        <date>2022-09-06</date>
+        <rev>v0.2</rev>
+        <date>Date2</date>
         <source>adidas.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -24,296 +24,391 @@
     </sheet>
   </design>
   <components>
-    <comp ref="BT1">
-      <value>Battery_Cell</value>
-      <footprint>Battery:BatteryHolder_Keystone_3002_1x2032</footprint>
-      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>0076a1c3-2f88-4f95-9a27-5f43e7e24475</tstamps>
-    </comp>
     <comp ref="D1">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c9c815b7-0480-4abe-9d50-8e40271746b3</tstamps>
     </comp>
     <comp ref="D2">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>dd32f86d-7f9f-4c36-a2fa-1b5a96e0cb56</tstamps>
     </comp>
     <comp ref="D3">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>7f5e3519-0cb8-40de-8ffe-6acad8b74f2d</tstamps>
     </comp>
     <comp ref="D4">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d3e7fc05-2b5f-4041-8395-9d96b9878e9a</tstamps>
     </comp>
     <comp ref="D5">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d5cc1f5b-88ff-431a-ad4a-b4fdc13ce7f8</tstamps>
     </comp>
     <comp ref="D6">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4b448848-aed2-4bc5-af16-d10773737acc</tstamps>
     </comp>
     <comp ref="D7">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>91afae29-dac3-4632-982b-189a3a2f4d4a</tstamps>
     </comp>
     <comp ref="D8">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>42c0a756-ddac-4b77-a8fa-628f73d4cde1</tstamps>
     </comp>
     <comp ref="D9">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>ad16b844-edd1-4d7a-a61a-5b0972dd206a</tstamps>
     </comp>
     <comp ref="D10">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>61dbf6f5-1217-4541-8ba3-0ded80f7d9bc</tstamps>
     </comp>
     <comp ref="D11">
-      <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <value>~</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>092f542e-acbe-499d-b44e-0110f0ed0411</tstamps>
     </comp>
     <comp ref="D12">
       <value>LHN974</value>
-      <footprint>1206_smt:LEDC3216X120N</footprint>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
       <fields>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-        <field name="STANDARD">IPC7-351B</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
-      <libsource lib="LHN974" part="LHN974" description=""/>
-      <property name="STANDARD" value="IPC7-351B"/>
-      <property name="MANUFACTURER" value="Osram"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.20mm"/>
-      <property name="PARTREV" value="2002-04-11"/>
+      <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MANUFACTURER" value="Valcon"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.8mm"/>
+      <property name="PARTREV" value="A"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>47f3046c-4c2f-4276-a208-f5e06b75b11a</tstamps>
     </comp>
-    <comp ref="J1">
-      <value>ISP Header</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>55b1b8ca-f60c-40ac-aa81-20b9d5ed1e41</tstamps>
-    </comp>
-    <comp ref="J2">
-      <value>Conn_01x02_Female</value>
-      <footprint>TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm</footprint>
-      <libsource lib="Connector" part="Conn_01x02_Female" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>1511cd94-a1bd-4bf8-8af8-1394b3d374da</tstamps>
-    </comp>
-    <comp ref="J3">
-      <value>SAO Header</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>b69b75c6-c641-4388-985a-8dce0a8c22ec</tstamps>
-    </comp>
     <comp ref="R1">
-      <value>R</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>0314a3d9-5e32-4d28-afd2-31955df5a8f2</tstamps>
     </comp>
     <comp ref="R2">
-      <value>R</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4760b83a-e92e-4051-b640-f2e6e6bae3f3</tstamps>
     </comp>
     <comp ref="R3">
-      <value>R</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>77ec1b68-6dc5-461d-ad47-138d0e487992</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>668a4c24-bcf7-43f2-aecb-e6093bd09322</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c500c2c-bc88-4bf3-ad1e-ad7f8190bd9b</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d412341-01d2-41c0-9c2f-59730b337ca7</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c28335e6-7ebf-4816-bfdd-7e4dc51f13c4</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2e7f3ec-02dd-4af2-a0b9-30652a5769fb</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c988cbf-7e4a-410d-9b4d-50f34342e0e1</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72786f2e-b6da-42e3-b3ce-83383014e9c4</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12fd9c69-1354-452a-9d15-ad3643c25b69</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>220Ω</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8baa90c-0af5-489f-9a2c-1c245b835ad2</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10kΩ</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f658223a-29f4-4fef-b22a-a73f333d7c40</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>B3F-1000</value>
+      <footprint>DEAD10C5:SW_B3F-1000</footprint>
+      <fields>
+        <field name="MANUFACTURER">Omron</field>
+        <field name="purpose">RESET</field>
+      </fields>
+      <libsource lib="dead10c5" part="B3F-1000" description=""/>
+      <property name="MANUFACTURER" value="Omron"/>
+      <property name="purpose" value="RESET"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e93ba0a-e292-4630-91b7-8a453fe79b54</tstamps>
     </comp>
     <comp ref="U1">
       <value>MPU-6050</value>
@@ -338,7 +433,7 @@
       <property name="PARTREV" value="3.4"/>
       <property name="AVAILABILITY" value="Good"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>d32b0a8d-ffd3-42fd-9b74-0f20882ab4f7</tstamps>
     </comp>
@@ -418,7 +513,7 @@
       <property name="L1_NOM" value=""/>
       <property name="L_MIN" value="0.41"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="File: adidas.kicad_sch"/>
+      <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8de03314-6811-491d-bc44-63a1cf72f18c</tstamps>
     </comp>
@@ -474,15 +569,15 @@
         <pin num="14" name="GND" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="Connector" part="Conn_01x02_Female">
-      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+    <libpart lib="Connector" part="Conn_01x02_Pin">
+      <description>Generic connector, single row, 01x02, script generated</description>
       <docs>~</docs>
       <footprints>
         <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">Conn_01x02_Female</field>
+        <field name="Value">Conn_01x02_Pin</field>
         <field name="Datasheet">~</field>
       </fields>
       <pins>
@@ -510,19 +605,6 @@
         <pin num="6" name="Pin_6" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="Battery_Cell">
-      <description>Single-cell battery</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">BT</field>
-        <field name="Value">Battery_Cell</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="+" type="passive"/>
-        <pin num="2" name="-" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <docs>~</docs>
@@ -537,21 +619,6 @@
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="LHN974" part="LHN974">
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LHN974</field>
-        <field name="Footprint">LEDC3216X120N</field>
-        <field name="STANDARD">IPC7-351B</field>
-        <field name="MANUFACTURER">Osram</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.20mm</field>
-        <field name="PARTREV">2002-04-11</field>
-      </fields>
-      <pins>
-        <pin num="+" name="" type="passive"/>
-        <pin num="-" name="" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="MPU-6050" part="MPU-6050">
@@ -587,11 +654,37 @@
         <pin num="24" name="SDA" type="bidirectional"/>
       </pins>
     </libpart>
+    <libpart lib="dead10c5" part="B3F-1000">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">B3F-1000</field>
+        <field name="Footprint">SW_B3F-1000</field>
+        <field name="MANUFACTURER">Omron</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dead10c5" part="LED-SMD-0805">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-SMD-0805</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="ATTINY841-SSU">
-      <uri>/home/franklin/workspace/badge/badge-2023-tri-poloski/kicad/footprints/DEAD10C5.pretty/ATTINY841-SSU.lib</uri>
-    </library>
     <library logical="Connector">
       <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
     </library>
@@ -601,149 +694,174 @@
     <library logical="Device">
       <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
     </library>
-    <library logical="LHN974">
-      <uri>/home/franklin/workspace/badge/1206_smt/LHN974.lib</uri>
-    </library>
-    <library logical="MPU-6050">
-      <uri>/home/franklin/workspace/badge/badge-2023-tri-poloski/kicad/footprints/DEAD10C5.pretty/MPU-6050.lib</uri>
+    <library logical="dead10c5">
+      <uri>/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/kicad/footprints/dead10c5.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="+BATT">
-      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
-      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="U1" pin="13" pinfunction="VDD" pintype="power_in"/>
-      <node ref="U2" pin="1" pinfunction="VCC" pintype="power_in"/>
+    <net code="1" name="/2(LED Bottom Row)">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="PB0" pintype="bidirectional"/>
     </net>
-    <net code="2" name="GND">
-      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
-      <node ref="D1" pin="-" pintype="passive"/>
-      <node ref="D10" pin="-" pintype="passive"/>
-      <node ref="D11" pin="-" pintype="passive"/>
-      <node ref="D12" pin="-" pintype="passive"/>
-      <node ref="D2" pin="-" pintype="passive"/>
-      <node ref="D3" pin="-" pintype="passive"/>
-      <node ref="D4" pin="-" pintype="passive"/>
-      <node ref="D5" pin="-" pintype="passive"/>
-      <node ref="D6" pin="-" pintype="passive"/>
-      <node ref="D7" pin="-" pintype="passive"/>
-      <node ref="D8" pin="-" pintype="passive"/>
-      <node ref="D9" pin="-" pintype="passive"/>
-      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
-      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="U1" pin="18" pinfunction="GND" pintype="power_in"/>
-      <node ref="U2" pin="14" pinfunction="GND" pintype="power_in"/>
-    </net>
-    <net code="3" name="Net-(D1-Pad+)">
-      <node ref="D1" pin="+" pintype="passive"/>
-      <node ref="D2" pin="+" pintype="passive"/>
-      <node ref="D3" pin="+" pintype="passive"/>
-      <node ref="R1" pin="2" pintype="passive"/>
-    </net>
-    <net code="4" name="Net-(D4-Pad+)">
-      <node ref="D4" pin="+" pintype="passive"/>
-      <node ref="D5" pin="+" pintype="passive"/>
-      <node ref="D6" pin="+" pintype="passive"/>
-      <node ref="D7" pin="+" pintype="passive"/>
+    <net code="2" name="/3(LED Mid Row)">
       <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="PB1" pintype="bidirectional"/>
     </net>
-    <net code="5" name="Net-(D10-Pad+)">
-      <node ref="D10" pin="+" pintype="passive"/>
-      <node ref="D11" pin="+" pintype="passive"/>
-      <node ref="D12" pin="+" pintype="passive"/>
-      <node ref="D8" pin="+" pintype="passive"/>
-      <node ref="D9" pin="+" pintype="passive"/>
-      <node ref="R3" pin="2" pintype="passive"/>
+    <net code="3" name="/4(RST)">
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="S1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="PB3" pintype="bidirectional"/>
     </net>
-    <net code="6" name="Net-(J1-Pad1)">
-      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="U2" pin="8" pinfunction="PA5" pintype="bidirectional"/>
+    <net code="4" name="/5(LED Top Row)">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="PB2" pintype="bidirectional"/>
     </net>
-    <net code="7" name="Net-(J1-Pad3)">
-      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    <net code="5" name="/7(SDA)">
+      <node ref="U1" pin="24" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U2" pin="7" pinfunction="PA6" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/9(SCL)">
       <node ref="U1" pin="23" pinfunction="SCL" pintype="input"/>
       <node ref="U2" pin="9" pinfunction="PA4" pintype="bidirectional"/>
     </net>
-    <net code="8" name="Net-(J1-Pad4)">
-      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="U2" pin="7" pinfunction="PA6" pintype="bidirectional"/>
-    </net>
-    <net code="9" name="Net-(J3-Pad3)">
-      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="U1" pin="24" pinfunction="SDA" pintype="bidirectional"/>
-      <node ref="U2" pin="6" pinfunction="PA7" pintype="bidirectional"/>
-    </net>
-    <net code="10" name="Net-(J3-Pad5)">
-      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
-      <node ref="U2" pin="13" pinfunction="PA0" pintype="bidirectional"/>
-    </net>
-    <net code="11" name="Net-(J3-Pad6)">
-      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    <net code="7" name="/12(SAO2)">
       <node ref="U2" pin="12" pinfunction="PA1" pintype="bidirectional"/>
     </net>
-    <net code="12" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1" pintype="passive"/>
-      <node ref="U2" pin="2" pinfunction="PB0" pintype="bidirectional"/>
+    <net code="8" name="/13(SAO1)">
+      <node ref="U2" pin="13" pinfunction="PA0" pintype="bidirectional"/>
     </net>
-    <net code="13" name="Net-(R2-Pad1)">
+    <net code="9" name="GND">
+      <node ref="D1" pin="1" pintype="passive"/>
+      <node ref="D10" pin="1" pintype="passive"/>
+      <node ref="D11" pin="1" pintype="passive"/>
+      <node ref="D12" pin="1" pintype="passive"/>
+      <node ref="D2" pin="1" pintype="passive"/>
+      <node ref="D3" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pintype="passive"/>
+      <node ref="D5" pin="1" pintype="passive"/>
+      <node ref="D6" pin="1" pintype="passive"/>
+      <node ref="D7" pin="1" pintype="passive"/>
+      <node ref="D8" pin="1" pintype="passive"/>
+      <node ref="D9" pin="1" pintype="passive"/>
+      <node ref="S1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="14" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="10" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
-      <node ref="U2" pin="3" pinfunction="PB1" pintype="bidirectional"/>
     </net>
-    <net code="14" name="Net-(R3-Pad1)">
-      <node ref="R3" pin="1" pintype="passive"/>
-      <node ref="U2" pin="5" pinfunction="PB2" pintype="bidirectional"/>
+    <net code="14" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="15" name="unconnected-(J1-Pad5)">
-      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    <net code="15" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="16" name="unconnected-(U1-Pad1)">
-      <node ref="U1" pin="1" pinfunction="CLKIN" pintype="input"/>
+    <net code="16" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="17" name="unconnected-(U1-Pad6)">
-      <node ref="U1" pin="6" pinfunction="AUX_DA" pintype="bidirectional"/>
+    <net code="17" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="18" name="unconnected-(U1-Pad7)">
-      <node ref="U1" pin="7" pinfunction="AUX_CL" pintype="input"/>
+    <net code="18" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
     </net>
-    <net code="19" name="unconnected-(U1-Pad8)">
-      <node ref="U1" pin="8" pinfunction="VLOGIC" pintype="power_in"/>
+    <net code="19" name="Net-(D10-Pad2)">
+      <node ref="D10" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
     </net>
-    <net code="20" name="unconnected-(U1-Pad9)">
-      <node ref="U1" pin="9" pinfunction="AD0" pintype="input"/>
+    <net code="20" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
     </net>
-    <net code="21" name="unconnected-(U1-Pad10)">
-      <node ref="U1" pin="10" pinfunction="REGOUT" pintype="passive"/>
+    <net code="21" name="Net-(D12-Pad2)">
+      <node ref="D12" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
     </net>
-    <net code="22" name="unconnected-(U1-Pad11)">
-      <node ref="U1" pin="11" pinfunction="FSYNC" pintype="input"/>
+    <net code="22" name="Net-(J1-Pin_1)">
+      <node ref="U2" pin="8" pinfunction="PA5" pintype="bidirectional"/>
     </net>
-    <net code="23" name="unconnected-(U1-Pad12)">
-      <node ref="U1" pin="12" pinfunction="INT" pintype="output"/>
+    <net code="23" name="VCC">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="24" name="unconnected-(U1-Pad19)">
-      <node ref="U1" pin="19" pinfunction="RESV@1" pintype="passive"/>
+    <net code="25" name="unconnected-(S1-Pad2)">
+      <node ref="S1" pin="2" pinfunction="2" pintype="passive+no_connect"/>
     </net>
-    <net code="25" name="unconnected-(U1-Pad20)">
-      <node ref="U1" pin="20" pinfunction="CPOUT" pintype="passive"/>
+    <net code="26" name="unconnected-(S1-Pad4)">
+      <node ref="S1" pin="4" pinfunction="4" pintype="passive+no_connect"/>
     </net>
-    <net code="26" name="unconnected-(U1-Pad21)">
-      <node ref="U1" pin="21" pinfunction="RESV@2" pintype="passive"/>
+    <net code="27" name="unconnected-(U1-AD0-Pad9)">
+      <node ref="U1" pin="9" pinfunction="AD0" pintype="input+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(U1-Pad22)">
-      <node ref="U1" pin="22" pinfunction="RESV" pintype="passive"/>
+    <net code="28" name="unconnected-(U1-AUX_CL-Pad7)">
+      <node ref="U1" pin="7" pinfunction="AUX_CL" pintype="input+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(U2-Pad4)">
-      <node ref="U2" pin="4" pinfunction="PB3" pintype="bidirectional"/>
+    <net code="29" name="unconnected-(U1-AUX_DA-Pad6)">
+      <node ref="U1" pin="6" pinfunction="AUX_DA" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U2-Pad10)">
-      <node ref="U2" pin="10" pinfunction="PA3" pintype="bidirectional"/>
+    <net code="30" name="unconnected-(U1-CLKIN-Pad1)">
+      <node ref="U1" pin="1" pinfunction="CLKIN" pintype="input+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U2-Pad11)">
-      <node ref="U2" pin="11" pinfunction="PA2" pintype="bidirectional"/>
+    <net code="31" name="unconnected-(U1-CPOUT-Pad20)">
+      <node ref="U1" pin="20" pinfunction="CPOUT" pintype="passive+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-FSYNC-Pad11)">
+      <node ref="U1" pin="11" pinfunction="FSYNC" pintype="input+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-INT-Pad12)">
+      <node ref="U1" pin="12" pinfunction="INT" pintype="output+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-REGOUT-Pad10)">
+      <node ref="U1" pin="10" pinfunction="REGOUT" pintype="passive+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-RESV-Pad22)">
+      <node ref="U1" pin="22" pinfunction="RESV" pintype="passive+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-RESV@1-Pad19)">
+      <node ref="U1" pin="19" pinfunction="RESV@1" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U1-RESV@2-Pad21)">
+      <node ref="U1" pin="21" pinfunction="RESV@2" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U1-VLOGIC-Pad8)">
+      <node ref="U1" pin="8" pinfunction="VLOGIC" pintype="power_in+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U2-PA2-Pad11)">
+      <node ref="U2" pin="11" pinfunction="PA2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U2-PA3-Pad10)">
+      <node ref="U2" pin="10" pinfunction="PA3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U2-PA7-Pad6)">
+      <node ref="U2" pin="6" pinfunction="PA7" pintype="bidirectional+no_connect"/>
     </net>
   </nets>
 </export>
