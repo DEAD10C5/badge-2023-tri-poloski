@@ -2,6 +2,7 @@
 # Format documentation: http://kicad-pcb.org/help/file-formats/
 
 kicad/adidas.xml
+
 # Temporary files
 *-drc.txt
 kibot_errors.filter
