@@ -14,3 +14,7 @@
 ![art](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/docs/images/adidas-brd2.png)
 
 ![routing](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/docs/images/adidas-brd.png)
+
+![front](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/docs/images/adidas-front-3d.png)
+
+![back](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/docs/images/adidas-back-3d.png)
