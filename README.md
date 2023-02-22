@@ -1,6 +1,6 @@
 # badge-2023-tri-poloski - взаимоблокировщики
 
-[![Cloudbot](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/cloudbot-call.yml/badge.svg)](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/cloudbot-call.yml) [![KiBot](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/kicad.yaml/badge.svg)](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/kicad.yaml)
+[![Cloudbot](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/cloudbot-call.yml/badge.svg)](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/cloudbot-call.yml) [![REUSE](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/reuse.yml/badge.svg)](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/reuse.yml) [![KiBot](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/kibot.yaml/badge.svg)](https://github.com/DEAD10C5/badge-2023-tri-poloski/actions/workflows/kibot.yaml)
 
 ## Created by
 
