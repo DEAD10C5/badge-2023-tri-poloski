@@ -1,10 +1,6 @@
 name: kicad-fabrication
 
 on:
-  push:
-    paths:
-    - 'kicad/**.kicad_sch'
-    - 'kicad/**.kicad_pcb'
   pull_request:
     paths:
       - 'kicad/**.kicad_sch'
