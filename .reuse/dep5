@@ -7,7 +7,7 @@ Files: kicad/*
 Copyright: 2023, DE:AD:10:C5 <devsecfranklin@duck.com>
 License: CERN-OHL-P-2.0
 
-Files: pcb/docs/* README.md
+Files: artwork/* docs/* README.md
 Copyright: 2023, DE:AD:10:C5 <devsecfranklin@duck.com>
 License: CC-BY-SA-4.0
 
@@ -15,6 +15,6 @@ Files: src/* lib/* include/* test/*
 Copyright: 2023, DE:AD:10:C5 <devsecfranklin@duck.com>
 License: GPL-3.0-or-later
 
-Files: .gitignore .kibot/* *.yml *.yaml *.ini
+Files: .git* .kibot/* *.yml *.yaml *.ini .markdownlint.json .vscode .whitesource
 Copyright: 2023, DE:AD:10:C5 <devsecfranklin@duck.com>
 License: CC0-1.0
