@@ -541,7 +541,7 @@
     </comp>
     <comp ref="U1">
       <value>MPU-6050</value>
-      <footprint>QFN50P400X400X95-24N</footprint>
+      <footprint>DEAD10C5:QFN50P400X400X95-24N</footprint>
       <datasheet>https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6000-datasheet1.pdf?ref_disty=mouser</datasheet>
       <fields>
         <field name="AVAILABILITY">Good</field>
@@ -577,7 +577,7 @@
     </comp>
     <comp ref="U2">
       <value>ATTINY841-SSU</value>
-      <footprint>SOIC127P599X175-14N</footprint>
+      <footprint>DEAD10C5:SOIC127P599X175-14N</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/268/Atmel_8495_8_bit_AVR_Microcontrollers_ATtiny441_AT-1315526.pdf</datasheet>
       <fields>
         <field name="A1_MIN">0.1</field>
