@@ -1,1 +1,4 @@
+# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <devsecfranklin@duck.com>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
 pdfCropMargins
