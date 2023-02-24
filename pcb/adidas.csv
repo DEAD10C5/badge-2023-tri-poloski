@@ -1,0 +1,10 @@
+Component Count:,27,,,,,,,,
+,,,,,,,,,
+Collated Components:,,,,,,,,,
+,,,,,,,,,
+Item,Qty,Reference(s),Value,Footprint,Digi-Key Part Number,Manufacturer,Manufacturer Product Number,Mouser Part,Datasheet
+1,12,"D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12",CTL1206FWH1T,LED_SMD:LED_1206_3216Metric,2679-CTL1206FWH1TTR-ND,Venkel,CTL1206FWH1T,,https://page.venkel.com/hubfs/Resources/Datasheets/LEDs/CTL1206FWH1T.pdf
+2,12,"R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12",220Ω,Resistor_SMD:R_1206_3216Metric,311-220ERCT-ND ,YAGEO,RC1206JR-07220RL,,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+3,1,R13,10kΩ,Resistor_SMD:R_1206_3216Metric,311-10KERCT-ND,YAGEO,RC1206JR-0710KL,,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+4,1,U1,MPU-6050,DEAD10C5:QFN50P400X400X95-24N,IMU ACCEL/GYRO 3-AXIS I2C 24QFN,TDK,MPU-6050,410-MPU-6050,https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6000-datasheet1.pdf?ref_disty=mouser
+5,1,U2,ATTINY841-SSU,DEAD10C5:SOIC127P599X175-14N,,Microchip,556-ATTINY841-SSU,,https://www.mouser.com/datasheet/2/268/Atmel_8495_8_bit_AVR_Microcontrollers_ATtiny441_AT-1315526.pdf
