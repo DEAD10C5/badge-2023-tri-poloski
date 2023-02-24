@@ -3,7 +3,7 @@
   <design>
     <source>/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/pcb/adidas.kicad_sch</source>
     <date>Date1</date>
-    <tool>Eeschema 7.0.0-da2b9df05c~165~ubuntu22.04.1</tool>
+    <tool>Eeschema 7.99.0-unknown-6803976ab3~166~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>гопник badge</title>
@@ -229,13 +229,13 @@
       <fields>
         <field name="Color">White</field>
         <field name="Digi-Key Part Number">2679-CTL1206FWH1TTR-ND</field>
-        <field name="MANUFACTURER">Venkel</field>
         <field name="MAXIMUM_PACKAGE_HEIGHT">1.2mm</field>
+        <field name="Manufacturer">Venkel</field>
         <field name="STANDARD">Manufacturer Recommendations</field>
       </fields>
       <libsource lib="dead10c5" part="LED-SMD-0805" description=""/>
       <property name="STANDARD" value="Manufacturer Recommendations"/>
-      <property name="MANUFACTURER" value="Venkel"/>
+      <property name="Manufacturer" value="Venkel"/>
       <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.2mm"/>
       <property name="Color" value="White"/>
       <property name="Digi-Key Part Number" value="2679-CTL1206FWH1TTR-ND"/>
@@ -544,18 +544,13 @@
       <footprint>DEAD10C5:QFN50P400X400X95-24N</footprint>
       <datasheet>https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6000-datasheet1.pdf?ref_disty=mouser</datasheet>
       <fields>
-        <field name="AVAILABILITY">Good</field>
         <field name="DESCRIPTION">IMU ACCEL/GYRO 3-AXIS I2C 24QFN</field>
         <field name="Description">IMU ACCEL/GYRO 3-AXIS I2C 24QFN</field>
-        <field name="MF">TDK</field>
         <field name="MP">MPU-6050</field>
         <field name="Manufacturer">TDK</field>
         <field name="Manufacturer Product Number">MPU-6050</field>
         <field name="Mouser Part ">410-MPU-6050</field>
         <field name="PACKAGE">QFN-24 InvenSense</field>
-        <field name="PARTREV">3.4</field>
-        <field name="PRICE">5.45 USD</field>
-        <field name="STANDARD">IPC-7351B</field>
       </fields>
       <libsource lib="dead10c5" part="MPU-6050" description=""/>
       <property name="Manufacturer Product Number" value="MPU-6050"/>
@@ -564,12 +559,7 @@
       <property name="PACKAGE" value="QFN-24 InvenSense"/>
       <property name="Mouser Part " value="410-MPU-6050"/>
       <property name="MP" value="MPU-6050"/>
-      <property name="STANDARD" value="IPC-7351B"/>
-      <property name="PRICE" value="5.45 USD"/>
       <property name="DESCRIPTION" value="IMU ACCEL/GYRO 3-AXIS I2C 24QFN"/>
-      <property name="MF" value="TDK"/>
-      <property name="PARTREV" value="3.4"/>
-      <property name="AVAILABILITY" value="Good"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -697,6 +687,19 @@
         <pin num="4" name="Pin_4" type="passive"/>
         <pin num="5" name="Pin_5" type="passive"/>
         <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="R">
@@ -830,13 +833,13 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+      <uri>/usr/share/kicad-nightly/symbols//Connector.kicad_sym</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
+      <uri>/usr/share/kicad-nightly/symbols//Connector_Generic.kicad_sym</uri>
     </library>
     <library logical="Device">
-      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+      <uri>/usr/share/kicad-nightly/symbols//Device.kicad_sym</uri>
     </library>
     <library logical="dead10c5">
       <uri>/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/pcb/footprints/dead10c5.kicad_sym</uri>
