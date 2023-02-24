@@ -4,6 +4,7 @@
 kicad/adidas.xml
 
 # Temporary files
+\#auto_saved_files#
 *-drc.txt
 kibot_errors.filter
 *.zip
