@@ -541,21 +541,35 @@
     </comp>
     <comp ref="U1">
       <value>MPU-6050</value>
-      <footprint>DEAD10C5:QFN50P400X400X95-24N</footprint>
+      <footprint>QFN50P400X400X95-24N</footprint>
       <datasheet>https://product.tdk.com/system/files/dam/doc/product/sensor/mortion-inertial/imu/data_sheet/mpu-6000-datasheet1.pdf?ref_disty=mouser</datasheet>
       <fields>
+        <field name="AVAILABILITY">Good</field>
+        <field name="DESCRIPTION">IMU ACCEL/GYRO 3-AXIS I2C 24QFN</field>
         <field name="Description">IMU ACCEL/GYRO 3-AXIS I2C 24QFN</field>
+        <field name="MF">TDK</field>
+        <field name="MP">MPU-6050</field>
         <field name="Manufacturer">TDK</field>
         <field name="Manufacturer Product Number">MPU-6050</field>
         <field name="Mouser Part ">410-MPU-6050</field>
         <field name="PACKAGE">QFN-24 InvenSense</field>
+        <field name="PARTREV">3.4</field>
+        <field name="PRICE">5.45 USD</field>
+        <field name="STANDARD">IPC-7351B</field>
       </fields>
-      <libsource lib="MPU-6050" part="MPU-6050" description=""/>
+      <libsource lib="dead10c5" part="MPU-6050" description=""/>
       <property name="Manufacturer Product Number" value="MPU-6050"/>
       <property name="Description" value="IMU ACCEL/GYRO 3-AXIS I2C 24QFN"/>
       <property name="Manufacturer" value="TDK"/>
       <property name="PACKAGE" value="QFN-24 InvenSense"/>
       <property name="Mouser Part " value="410-MPU-6050"/>
+      <property name="MP" value="MPU-6050"/>
+      <property name="STANDARD" value="IPC-7351B"/>
+      <property name="PRICE" value="5.45 USD"/>
+      <property name="DESCRIPTION" value="IMU ACCEL/GYRO 3-AXIS I2C 24QFN"/>
+      <property name="MF" value="TDK"/>
+      <property name="PARTREV" value="3.4"/>
+      <property name="AVAILABILITY" value="Good"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -563,19 +577,85 @@
     </comp>
     <comp ref="U2">
       <value>ATTINY841-SSU</value>
-      <footprint>DEAD10C5:SOIC127P599X175-14N</footprint>
+      <footprint>SOIC127P599X175-14N</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/268/Atmel_8495_8_bit_AVR_Microcontrollers_ATtiny441_AT-1315526.pdf</datasheet>
       <fields>
+        <field name="A1_MIN">0.1</field>
+        <field name="A_MAX">1.75</field>
+        <field name="A_MIN">1.75</field>
+        <field name="A_NOM">1.75</field>
+        <field name="B_MAX">0.5</field>
+        <field name="B_MIN">0.33</field>
+        <field name="B_NOM">0.415</field>
+        <field name="D2_MAX">0.0</field>
+        <field name="D_MAX">8.74</field>
+        <field name="D_MIN">8.55</field>
+        <field name="D_NOM">8.645</field>
+        <field name="E1_MAX">3.99</field>
+        <field name="E1_MIN">3.8</field>
+        <field name="E1_NOM">3.895</field>
+        <field name="E2_MAX">0.0</field>
+        <field name="ENOM">1.27</field>
+        <field name="E_MAX">6.19</field>
+        <field name="E_MIN">5.8</field>
+        <field name="E_NOM">5.995</field>
+        <field name="L_MAX">1.27</field>
+        <field name="L_MIN">0.41</field>
+        <field name="L_NOM">0.84</field>
+        <field name="MANUFACTURER">Microchip</field>
         <field name="MAXIMUM_PACKAGE_HEIGHT">1.75mm</field>
         <field name="Manufacturer">Microchip</field>
         <field name="Mouser Part">556-ATTINY841-SSU</field>
         <field name="PACKAGE_TYPE">SOIC-14</field>
+        <field name="PARTREV">A</field>
+        <field name="PIN_COUNT">14.0</field>
+        <field name="STANDARD">IPC 7351B</field>
       </fields>
-      <libsource lib="ATTINY841-SSU" part="ATTINY841-SSU" description=""/>
+      <libsource lib="dead10c5" part="ATTINY841-SSU" description=""/>
       <property name="PACKAGE_TYPE" value="SOIC-14"/>
       <property name="Manufacturer" value="Microchip"/>
       <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.75mm"/>
       <property name="Mouser Part" value="556-ATTINY841-SSU"/>
+      <property name="B_NOM" value="0.415"/>
+      <property name="B_MIN" value="0.33"/>
+      <property name="D_MIN" value="8.55"/>
+      <property name="PINS" value=""/>
+      <property name="E2_MAX" value="0.0"/>
+      <property name="L1_MIN" value=""/>
+      <property name="D1_NOM" value=""/>
+      <property name="PARTREV" value="A"/>
+      <property name="A_NOM" value="1.75"/>
+      <property name="STANDARD" value="IPC 7351B"/>
+      <property name="D1_MIN" value=""/>
+      <property name="D_MAX" value="8.74"/>
+      <property name="L1_MAX" value=""/>
+      <property name="VACANCIES" value=""/>
+      <property name="E1_MAX" value="3.99"/>
+      <property name="DMIN" value=""/>
+      <property name="E1_MIN" value="3.8"/>
+      <property name="MANUFACTURER" value="Microchip"/>
+      <property name="L_MAX" value="1.27"/>
+      <property name="E1_NOM" value="3.895"/>
+      <property name="E_MAX" value="6.19"/>
+      <property name="D1_MAX" value=""/>
+      <property name="DMAX" value=""/>
+      <property name="E_NOM" value="5.995"/>
+      <property name="D_NOM" value="8.645"/>
+      <property name="A_MIN" value="1.75"/>
+      <property name="B_MAX" value="0.5"/>
+      <property name="ENOM" value="1.27"/>
+      <property name="D2_MAX" value="0.0"/>
+      <property name="SNAPEDA_PACKAGE_ID" value=""/>
+      <property name="L_NOM" value="0.84"/>
+      <property name="DNOM" value=""/>
+      <property name="EMIN" value=""/>
+      <property name="A_MAX" value="1.75"/>
+      <property name="PIN_COUNT" value="14.0"/>
+      <property name="EMAX" value=""/>
+      <property name="A1_MIN" value="0.1"/>
+      <property name="E_MIN" value="5.8"/>
+      <property name="L1_NOM" value=""/>
+      <property name="L_MIN" value="0.41"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -583,56 +663,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="ATTINY841-SSU" part="ATTINY841-SSU">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">ATTINY841-SSU</field>
-        <field name="Footprint">SOIC127P599X175-14N</field>
-        <field name="B_NOM">0.415</field>
-        <field name="B_MIN">0.33</field>
-        <field name="D_MIN">8.55</field>
-        <field name="E2_MAX">0.0</field>
-        <field name="PARTREV">A</field>
-        <field name="A_NOM">1.75</field>
-        <field name="STANDARD">IPC 7351B</field>
-        <field name="D_MAX">8.74</field>
-        <field name="E1_MAX">3.99</field>
-        <field name="E1_MIN">3.8</field>
-        <field name="MANUFACTURER">Microchip</field>
-        <field name="L_MAX">1.27</field>
-        <field name="E1_NOM">3.895</field>
-        <field name="E_MAX">6.19</field>
-        <field name="E_NOM">5.995</field>
-        <field name="D_NOM">8.645</field>
-        <field name="A_MIN">1.75</field>
-        <field name="B_MAX">0.5</field>
-        <field name="ENOM">1.27</field>
-        <field name="D2_MAX">0.0</field>
-        <field name="L_NOM">0.84</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.75mm</field>
-        <field name="A_MAX">1.75</field>
-        <field name="PIN_COUNT">14.0</field>
-        <field name="A1_MIN">0.1</field>
-        <field name="E_MIN">5.8</field>
-        <field name="L_MIN">0.41</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VCC" type="power_in"/>
-        <pin num="2" name="PB0" type="bidirectional"/>
-        <pin num="3" name="PB1" type="bidirectional"/>
-        <pin num="4" name="PB3" type="bidirectional"/>
-        <pin num="5" name="PB2" type="bidirectional"/>
-        <pin num="6" name="PA7" type="bidirectional"/>
-        <pin num="7" name="PA6" type="bidirectional"/>
-        <pin num="8" name="PA5" type="bidirectional"/>
-        <pin num="9" name="PA4" type="bidirectional"/>
-        <pin num="10" name="PA3" type="bidirectional"/>
-        <pin num="11" name="PA2" type="bidirectional"/>
-        <pin num="12" name="PA1" type="bidirectional"/>
-        <pin num="13" name="PA0" type="bidirectional"/>
-        <pin num="14" name="GND" type="power_in"/>
-      </pins>
-    </libpart>
     <libpart lib="Connector" part="Conn_01x02_Pin">
       <description>Generic connector, single row, 01x02, script generated</description>
       <docs>~</docs>
@@ -685,7 +715,86 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="MPU-6050" part="MPU-6050">
+    <libpart lib="dead10c5" part="ATTINY841-SSU">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATTINY841-SSU</field>
+        <field name="Footprint">SOIC127P599X175-14N</field>
+        <field name="B_NOM">0.415</field>
+        <field name="B_MIN">0.33</field>
+        <field name="D_MIN">8.55</field>
+        <field name="E2_MAX">0.0</field>
+        <field name="PARTREV">A</field>
+        <field name="A_NOM">1.75</field>
+        <field name="STANDARD">IPC 7351B</field>
+        <field name="D_MAX">8.74</field>
+        <field name="E1_MAX">3.99</field>
+        <field name="E1_MIN">3.8</field>
+        <field name="MANUFACTURER">Microchip</field>
+        <field name="L_MAX">1.27</field>
+        <field name="E1_NOM">3.895</field>
+        <field name="E_MAX">6.19</field>
+        <field name="E_NOM">5.995</field>
+        <field name="D_NOM">8.645</field>
+        <field name="A_MIN">1.75</field>
+        <field name="B_MAX">0.5</field>
+        <field name="ENOM">1.27</field>
+        <field name="D2_MAX">0.0</field>
+        <field name="L_NOM">0.84</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">1.75mm</field>
+        <field name="A_MAX">1.75</field>
+        <field name="PIN_COUNT">14.0</field>
+        <field name="A1_MIN">0.1</field>
+        <field name="E_MIN">5.8</field>
+        <field name="L_MIN">0.41</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="PB0" type="bidirectional"/>
+        <pin num="3" name="PB1" type="bidirectional"/>
+        <pin num="4" name="PB3" type="bidirectional"/>
+        <pin num="5" name="PB2" type="bidirectional"/>
+        <pin num="6" name="PA7" type="bidirectional"/>
+        <pin num="7" name="PA6" type="bidirectional"/>
+        <pin num="8" name="PA5" type="bidirectional"/>
+        <pin num="9" name="PA4" type="bidirectional"/>
+        <pin num="10" name="PA3" type="bidirectional"/>
+        <pin num="11" name="PA2" type="bidirectional"/>
+        <pin num="12" name="PA1" type="bidirectional"/>
+        <pin num="13" name="PA0" type="bidirectional"/>
+        <pin num="14" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="dead10c5" part="B3F-1000">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">B3F-1000</field>
+        <field name="Footprint">SW_B3F-1000</field>
+        <field name="MANUFACTURER">Omron</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dead10c5" part="LED-SMD-0805">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-SMD-0805</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="MANUFACTURER">Valcon</field>
+        <field name="PARTREV">A</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dead10c5" part="MPU-6050">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MPU-6050</field>
@@ -716,35 +825,6 @@
         <pin num="22" name="RESV" type="passive"/>
         <pin num="23" name="SCL" type="input"/>
         <pin num="24" name="SDA" type="bidirectional"/>
-      </pins>
-    </libpart>
-    <libpart lib="dead10c5" part="B3F-1000">
-      <fields>
-        <field name="Reference">S</field>
-        <field name="Value">B3F-1000</field>
-        <field name="Footprint">SW_B3F-1000</field>
-        <field name="MANUFACTURER">Omron</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="dead10c5" part="LED-SMD-0805">
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED-SMD-0805</field>
-        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
-        <field name="MANUFACTURER">Valcon</field>
-        <field name="PARTREV">A</field>
-        <field name="STANDARD">Manufacturer Recommendations</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">0.8mm</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
   </libparts>
@@ -869,54 +949,54 @@
     <net code="22" name="Net-(J1-Pin_1)">
       <node ref="U2" pin="8" pinfunction="PA5" pintype="bidirectional"/>
     </net>
-    <net code="23" name="VCC">
+    <net code="23" name="VDD">
       <node ref="R13" pin="1" pintype="passive"/>
       <node ref="U1" pin="13" pinfunction="VDD" pintype="power_in"/>
       <node ref="U2" pin="1" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="27" name="unconnected-(U1-AD0-Pad9)">
+    <net code="26" name="unconnected-(U1-AD0-Pad9)">
       <node ref="U1" pin="9" pinfunction="AD0" pintype="input+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(U1-AUX_CL-Pad7)">
+    <net code="27" name="unconnected-(U1-AUX_CL-Pad7)">
       <node ref="U1" pin="7" pinfunction="AUX_CL" pintype="input+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U1-AUX_DA-Pad6)">
+    <net code="28" name="unconnected-(U1-AUX_DA-Pad6)">
       <node ref="U1" pin="6" pinfunction="AUX_DA" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U1-CLKIN-Pad1)">
+    <net code="29" name="unconnected-(U1-CLKIN-Pad1)">
       <node ref="U1" pin="1" pinfunction="CLKIN" pintype="input+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U1-CPOUT-Pad20)">
+    <net code="30" name="unconnected-(U1-CPOUT-Pad20)">
       <node ref="U1" pin="20" pinfunction="CPOUT" pintype="passive+no_connect"/>
     </net>
-    <net code="32" name="unconnected-(U1-FSYNC-Pad11)">
+    <net code="31" name="unconnected-(U1-FSYNC-Pad11)">
       <node ref="U1" pin="11" pinfunction="FSYNC" pintype="input+no_connect"/>
     </net>
-    <net code="33" name="unconnected-(U1-INT-Pad12)">
+    <net code="32" name="unconnected-(U1-INT-Pad12)">
       <node ref="U1" pin="12" pinfunction="INT" pintype="output+no_connect"/>
     </net>
-    <net code="34" name="unconnected-(U1-REGOUT-Pad10)">
+    <net code="33" name="unconnected-(U1-REGOUT-Pad10)">
       <node ref="U1" pin="10" pinfunction="REGOUT" pintype="passive+no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U1-RESV-Pad22)">
+    <net code="34" name="unconnected-(U1-RESV-Pad22)">
       <node ref="U1" pin="22" pinfunction="RESV" pintype="passive+no_connect"/>
     </net>
-    <net code="36" name="unconnected-(U1-RESV@1-Pad19)">
+    <net code="35" name="unconnected-(U1-RESV@1-Pad19)">
       <node ref="U1" pin="19" pinfunction="RESV@1" pintype="passive+no_connect"/>
     </net>
-    <net code="37" name="unconnected-(U1-RESV@2-Pad21)">
+    <net code="36" name="unconnected-(U1-RESV@2-Pad21)">
       <node ref="U1" pin="21" pinfunction="RESV@2" pintype="passive+no_connect"/>
     </net>
-    <net code="38" name="unconnected-(U1-VLOGIC-Pad8)">
+    <net code="37" name="unconnected-(U1-VLOGIC-Pad8)">
       <node ref="U1" pin="8" pinfunction="VLOGIC" pintype="power_in+no_connect"/>
     </net>
-    <net code="39" name="unconnected-(U2-PA2-Pad11)">
+    <net code="38" name="unconnected-(U2-PA2-Pad11)">
       <node ref="U2" pin="11" pinfunction="PA2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="40" name="unconnected-(U2-PA3-Pad10)">
+    <net code="39" name="unconnected-(U2-PA3-Pad10)">
       <node ref="U2" pin="10" pinfunction="PA3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="41" name="unconnected-(U2-PA7-Pad6)">
+    <net code="40" name="unconnected-(U2-PA7-Pad6)">
       <node ref="U2" pin="6" pinfunction="PA7" pintype="bidirectional+no_connect"/>
     </net>
   </nets>
