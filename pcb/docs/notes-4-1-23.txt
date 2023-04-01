@@ -1,0 +1,4 @@
+1. move the MPU or the battery so it is easier to insert the coin cell
+2. The mounting hole is missing from the board. (1, 2, or 3 holes?)
+3. Can the chip be programmed while it is attached to the board? Depends on connections? 
+
