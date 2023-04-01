@@ -1,4 +1,21 @@
 1. move the MPU or the battery so it is easier to insert the coin cell
 2. The mounting hole is missing from the board. (1, 2, or 3 holes?)
-3. Can the chip be programmed while it is attached to the board? Depends on connections? 
+3. Can the chip be programmed while it is attached to the board? Depends on connections?
+4. the switch is not needed with "regular" LED. Could still be used for blink patterns? 
 
+
+we can use the "optiboot" core and program the chip using USB to serial converter. 
+
+## Programming
+
+[Add the ATTINY 841 using these directions](https://github.com/SpenceKonde/ATTinyCore/blob/v2.0.0-devThis-is-the-head-submit-PRs-against-this/Installation.md#boards-manager-installation)
+
+Choose board ATtiny441/841 with Optiboot. This allows programming via USB to Serial cable not just ISP header.
+Programmer: ATtiny as ISP (ATtiny Core)
+
+Choose UART1 if you are using ISP header programming since the TX is on pin 8 and the RX is on pin 9.
+For USB to TTL, connect rx to pin8 TX and tx to PIN9 rx, gnd and optional power (power can come from arduino, etc.)
+there is a 0.1 micro farad capacitor across power and ground pins.
+
+Connect board, burn bootloader from board menu.
+Then you can start uploading sketches

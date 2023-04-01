@@ -27,6 +27,11 @@ void setup()
   Serial.println("...");
   Serial.print("Version: ");
   Serial.println(VERSION);
+
+  pinMode(BOTTOM_ROW, OUTPUT);
+  pinMode(MIDDLE_ROW, OUTPUT);
+  pinMode(TOP_ROW, OUTPUT);
+
   Wire.begin();                // Initialize comunication
   Wire.beginTransmission(MPU); // Start communication with MPU6050 // MPU=0x68
   Wire.write(0x6B);            // Talk to the register 6B
@@ -52,6 +57,11 @@ void setup()
 
 void loop()
 {
+  digitalWrite(BOTTOM_ROW, HIGH);
+  digitalWrite(MIDDLE_ROW, HIGH);
+  digitalWrite(TOP_ROW, HIGH);
+  delay(100);
+
   // === Read acceleromter data === //
   Wire.beginTransmission(MPU);
   Wire.write(0x3B); // Start with register 0x3B (ACCEL_XOUT_H)
@@ -93,6 +103,11 @@ void loop()
   Serial.print(pitch);
   Serial.print("/");
   Serial.println(yaw);
+
+  digitalWrite(BOTTOM_ROW, LOW);
+  digitalWrite(MIDDLE_ROW, LOW);
+  digitalWrite(TOP_ROW, LOW);
+  delay(100);
 }
 
 void calculate_IMU_error()

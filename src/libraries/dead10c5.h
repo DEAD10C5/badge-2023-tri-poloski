@@ -27,8 +27,11 @@ Try to avoid D0 (pin 5) and D2 (pin 6) if you plan to use I2C.
 #include <SoftwareSerial.h> // used for serial output on the badge
 
 // pins'n'stuff
-const uint8_t  DATA_PIN   = PA2;
+//const uint8_t  DATA_PIN   = PA2;
 const uint8_t  CLOCK_PIN  = PA3;
+const uint8_t  BOTTOM_ROW = 0; // PB0 on pin2
+const uint8_t  MIDDLE_ROW = 1; // PB1 on pin3
+const uint8_t  TOP_ROW = 2; // PB2 on pin5
 
 // MPU6050
 float AccX, AccY, AccZ;
