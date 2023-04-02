@@ -10,10 +10,9 @@
 - (OPTIONAL) solder a 2×3 Pin 6 Pin With Polarizing Key. The connector should be oriented as
   shown in the [AND!XOR SAO Reference Designs](https://github.com/DEAD10C5/badge-project-template/blob/main/docs/shitty_add_ons.md)
 
-## Serial
+## Serial Console
 
 You can make a serial connection to the badge using a USB to TTL serial cable.
-
 For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
 - Green wire: Connect to serial port, right side looking at back.
