@@ -21,9 +21,9 @@ void setup()
 {
   Serial.begin(57600);
 
-  pinMode(BOTTOM_ROW, OUTPUT);
-  pinMode(MIDDLE_ROW, OUTPUT);
-  pinMode(TOP_ROW, OUTPUT);
+  pinMode(2, OUTPUT); //BOTTOM
+  pinMode(3, OUTPUT); //MIDDLE
+  pinMode(5, OUTPUT); // TOP
   /*
   Wire.begin();                // Initialize comunication
   Wire.beginTransmission(MPU); // Start communication with MPU6050 // MPU=0x68
@@ -57,18 +57,22 @@ void loop()
   Serial.println("...");
   Serial.print("Version: ");
   Serial.println(VERSION);
+
   digitalWrite(BOTTOM_ROW, HIGH);
-  delay(100);
+  delay(1000);
   digitalWrite(BOTTOM_ROW, LOW);
-  delay(100);
+  delay(1000);
+  
   digitalWrite(MIDDLE_ROW, HIGH);
-  delay(100);
+  delay(1000);
   digitalWrite(MIDDLE_ROW, LOW);
-  delay(100);
+  delay(1000);
+
   digitalWrite(TOP_ROW, HIGH);
-  delay(100);
+  delay(1000);
   digitalWrite(TOP_ROW, LOW);
-  delay(100);
+  delay(1000);
+
   // // === Read acceleromter data === //
   // Wire.beginTransmission(MPU);
   // Wire.write(0x3B); // Start with register 0x3B (ACCEL_XOUT_H)
