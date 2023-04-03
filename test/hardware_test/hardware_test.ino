@@ -5,8 +5,10 @@
    | | | |  _| (_) / _ \ | | | (_) | | | (_) |   |___ \
    | |_| | |___ _ / ___ \| |_| |_| | |_| |_| |___ ___) |
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
-   Author : @dead10c5 @theDevilsVoice
-   Date   : Apr 4, 2023
+
+
+   Author : @theDevilsVoice https://twitter.com/dead10c5
+   Date   : April 3, 2023
    Version: 0.2
 */
 
@@ -28,9 +30,9 @@ void setup()
   Serial.print("Version: ");
   Serial.println(VERSION);
 
-  pinMode(2, OUTPUT); // BOTTOM
-  pinMode(3, OUTPUT); // MIDDLE
-  pinMode(5, OUTPUT); // TOP
+  pinMode(BOTTOM_ROW, OUTPUT);
+  pinMode(MIDDLE_ROW, OUTPUT);
+  pinMode(TOP_ROW, OUTPUT);
 
   Wire.begin();                // Initialize comunication
   Wire.beginTransmission(MPU); // Start communication with MPU6050 // MPU=0x68

@@ -7,13 +7,13 @@
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
 
 
-   Author : @theDevilsVoice @dead10c5
-   Date   : April 4, 2023
+   Author : @theDevilsVoice https://twitter.com/dead10c5
+   Date   : April 3, 2023
    Version: 0.2
 */
 #ifndef DEAD10C5_H
 #define DEAD10C5
-#define VERSION "0.2"
+#define VERSION "v0.2 - 03 April 2023 - гопник badge - Путин хуйло"
 
 #define RX 8 // serial RX and TX pins.
 #define TX 9 // this pin is being used for serial as well?
