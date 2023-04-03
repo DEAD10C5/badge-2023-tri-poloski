@@ -28,6 +28,6 @@ jobs:
         run: pip install --upgrade platformio
 
       - name: Build PlatformIO examples
-        run: pio ci --board=<ID_1> --board=<ID_2> --board=<ID_N>
+        run: pio ci --lib="src/include" --board=attiny841
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.hardware_test }}
