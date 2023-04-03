@@ -32,6 +32,8 @@ const uint8_t MIDDLE_ROW = PA1; // PB1 on pin3
 const uint8_t TOP_ROW = PB2;    // PB2 on pin5
 
 // MPU6050
+const int MPU = 0x68; // MPU6050 I2C address
+
 float AccX, AccY, AccZ;
 float GyroX, GyroY, GyroZ;
 float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ;
