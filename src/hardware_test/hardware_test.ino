@@ -19,7 +19,7 @@ const int MPU = 0x68; // MPU6050 I2C address
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(57600);
 
   pinMode(BOTTOM_ROW, OUTPUT);
   pinMode(MIDDLE_ROW, OUTPUT);
