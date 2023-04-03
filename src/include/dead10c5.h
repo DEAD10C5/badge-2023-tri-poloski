@@ -8,18 +8,14 @@
 
 
    Author : @theDevilsVoice @dead10c5
-   Date   : Feb 4, 2023
-   Version: 0.1
+   Date   : April 4, 2023
+   Version: 0.2
 */
 #ifndef DEAD10C5_H
 #define DEAD10C5
-#define VERSION "0.1"
+#define VERSION "0.2"
 
-/*
-Define the RX and TX pins. Choose any two pins that are unused.
-Try to avoid D0 (pin 5) and D2 (pin 6) if you plan to use I2C.
-*/
-#define RX 8
+#define RX 8 // serial RX and TX pins.
 #define TX 9
 
 #include <Arduino.h> // default library for Arduino

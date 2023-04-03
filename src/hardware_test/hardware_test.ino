@@ -6,8 +6,8 @@
    | |_| | |___ _ / ___ \| |_| |_| | |_| |_| |___ ___) |
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
    Author : @dead10c5 @theDevilsVoice
-   Date   : Feb 4, 2023
-   Version: 0.1
+   Date   : Apr 4, 2023
+   Version: 0.2
 */
 
 #include "dead10c5.h"
@@ -50,6 +50,7 @@ void setup()
 
 void loop()
 {
+  Serial.begin(57600);
   Serial.println("#######################################");
   Serial.println("# взаимоблокировщики Русский хардбасс #");
   Serial.println("#######################################");
