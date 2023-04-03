@@ -21,14 +21,78 @@ const int MPU = 0x68; // MPU6050 I2C address
 
 void setup()
 {
-  Serial.begin(57600);
-  Serial.println("#######################################");
-  Serial.println("# взаимоблокировщики Русский хардбасс #");
-  Serial.println("#######################################");
-  Serial.println("This badge was a lot of work and a lot of fun for us. Hope you enjoy it!");
-  Serial.println("...");
-  Serial.print("Version: ");
-  Serial.println(VERSION);
+  Serial1.begin(9600);
+
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&#####&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&#PJ7!~~~:......^!YB&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&BJ~^^7JYP5Y5J?!^7~.  :75G&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&57!?YJJ7Y7!!~?7??7?JJ!~?!:75PB@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&P!YBBJ. :!Y?^:::^!?JJJY?J7.  ^5P5#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#!7B&G: .!J??J5G#&&&&&#PJ?J?^.. .!JYP&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@&#BBBB#&@@#B####&@@#^7GGJ. :J?7YPGB#&@@@@@@@&GJ7JJ~^   !YY&@@@@&BP5G#@@&#BB####@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&P.....:.YB^..:. 5&&~7Y.~^: ~YY....::.5&@@@&#P7: YJ:.    ^J?&@&P^.  :.7BY...... G@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.. :.~. Y::  :^G#Y~B7.~:~ ^BY:~ :.~. G&@&~:~?~ 5^. .!.. ??P&B.. .~.^ !!.  !!7Y#@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.~ !^^: Y::  5B#5.7G^:  . .GY:J ~^^^ 55555Y^!! Y.: .Y.7 !Y:JY.. :J : ^~.  ..::G&@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.! !:^. Y::... Y:  J.: :.. YY:J ~^:. Y. .B#J~! Y.: .Y:? ~~  7.: :P777Y!.  ~.: :#@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.! !::. Y::  :^5?.7J.: ~.. 7Y:J ~^:. 5J?Y&&J~! Y:: .Y:? ~Y~!Y.: :G555P5JYYG^: .B&@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.~ !^:  Y::  G##Y~B?.   .  ^J:? ~^.  P&&@@&J~! Y.^ :Y.? ~BPPP.: :Y.^ ~~:..P^^ .B&@@@@@@@")
+  Serial1.println("@@@@@@@@@@&5.. :..  Y::..!^7~.::   : ...?:? :.   5!:~##?^~ 5^. .!.: !7..Y.:..~.  77.: !:. :#@@@@@@@@")
+  Serial1.println("@@@@@@@@@@&P..... .?G^.::: ^~ ..   Y!...7.:... .7G^ .B&J...GG~.     ^~  55:.   .7B#7.. . :G&@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@&#####&@@&######Y!BG5  YB#####BGP5PGGG55PBBBGB#&&&J:55J  J55&&&BGGB&@@@@&BGG#&@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@5?&&G  Y#&#BGPP55YJY?^7?7!?7?JYPGBY^##Y  ?GG@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@5?&&G .JPGGY5P?J5:.J~^?Y?.!  ~:.?YJ75P?  ?GG@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@P?&BPYG#&&G!?J557!!J???!^.. .7~J5PPGP5Y~ JGG@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@PJPB&@@@@@BG&#BGPPPJ.   .^^7JY5PPPPPGGGG5?JP&@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@&GP#@@@@@@&#BPYJ7!~^.     .^~!7?JYYY5PPGGGGPY7Y#@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@#P#@@@@@&#PYJ?77?J7Y5?PGPPBG55Y??77777!?55PGGGP~:5&@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@GP&@@@@&GYJ???JY?#&#&@@@@@@@&@@@&&#P5J!^:^~?YPBBBJ.7&@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@&5G@@@@&P?~~~JYYB&&@@@&&@@@@@BYP&@@@@@@&G5~..:~?YB&&B:!&@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@&YP@@@&G?~  !J?G&@@@&#5~B@@@@@@&JB@@@@@@@@@#P!..:!YP&&#~7&@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@G?&@@&?^: :?G&@@@@&PJ!!5YG&@@@#G&@@@@@@@@@@@@&5:.:^?J#&&7P@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@&~B&@#~:. ^5BB@@@@@@#&&&#?^?&&G!JB@@@@@@@@@@@@&&G^..:~!#&&5&@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@&P~&&&!:. ^GGGB@@&&&&&&#G5!!.G#~~^JPB#&&&&&@@@@#GBG^  .:7B&#G@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@&?J&&Y.:..5JG&@&&#BBGPP5YJJ!:G#7^?JJY5PGGBB&&@@&YYG5.  ::!G#P@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@&!G&#^:..!7B&&5^!5555YY555PY^5#J!G555YJ5555J~7B&#JPG?  .:~~B5&@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@&JGBP.:..55JBY.7J55555555Y55:YB?75YYY555555Y?^:BB7GG5 ..~7^YY&@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@&5YGY^!^.PG77:~5YP5555555557.G#Y^YPPPP555555J5.77^PG5 :.!~PYP@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@B!P5J?^.5GJ? :!Y555555P55J: 7Y7.!YPPPP55555J!..!!#BP.7:~^B?#@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@&7?GPY! !PYY   :7Y55YJ!^7^:~5GGY^!7~7Y5P5Y~.  .5!GG7.~::??J&@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@#755Y7: JJPY:77^^~~7?.  ..Y#&&#!.. :!^^~~:~~:YG?JY .:!^?~&@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@B!~~^^::PY5P5GB5755: .. .P#&&#~.   :J7^5B55PPJYP. ^?Y7:B@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@&G: :^^^:55J~!Y5Y?::7JJ~?B#&&&G^~^...!YYJ:.?5P5. ^?57!B@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@B~ .::^.~^:^7~:~7Y555YYGBB#&#?5P5J!^:    :J7..7YJ!Y#@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@&Y. ::^.:!!~^ :7J555J!!?7~!JYJ55J7^ .  :^. .^7~!G&@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@#Y::^. 7..^: .:~?~^YBB#B5~.^^^:: ^!^ :     ~5&@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&Y~  ~ .!. !5P~ YB#&@@@#! 7YP?..7. ^  .!G&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&B7  ~J.   ^5P:.?G#&@@@&5 :~J~    !J :5#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@&#BPJ!:  ..~7     ~~^JPP5YYY7.  :     ^?:.^~7YPB#&@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@#7..^.   ....^ .. : ^7J?~~~~~~:...! .. : :!!~~~~!7!??#@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@&Y ....^~!YBBGBP::    !?~^:.:~?YYPP~ . ::7BBBGPY7J?!^:~#@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@&B:.....7B&@@@&#5..   ^.  .. ^^^~.7.  . ~GB&&@&#5!.:.^^#@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@&G.   . J##GPYJ7! .^.   .^...:.    .~..7JY5PB##!.  :.P&@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@&5.   :.7!7^:. :YG#G?:   .::.  .~JGBY^  .:~JJ!.. ^:J&@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@&G:. .. .  .~5#@@@@@&#BBG5PGGB&&@@@&B?:    ^ ..~75&@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@&Y^.:.77P#@@@@@@@@@@@@@@@@@@@@@@@@@@&#G?~!.:!P&@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  Serial1.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+
+  delay(1000);
+  Serial1.println("#######################################");
+  Serial1.println("# взаимоблокировщики Русский хардбасс #");
+  Serial1.println("#######################################");
+  Serial1.println("This badge was a lot of fun to make. Hope you enjoy it!");
+  Serial1.println("...");
+  Serial1.print("Version: ");
+  Serial1.println(VERSION);
+  delay(1000);
+
+  Serial1.println("Concept: Yaya Pancho");
+  Serial1.println("Translations: @muscovitebob");
+  Serial1.println("Artwork: @p0lr_")
+  Serial1.println("Hardware: @p0lr_ @thedevilsvoice");
+  Serial1.println("Software: @thedevilsvoice");
+  delay(1000);
 
   pinMode(BOTTOM_ROW, OUTPUT);
   pinMode(MIDDLE_ROW, OUTPUT);
@@ -60,19 +124,20 @@ void setup()
 
 void loop()
 {
-  Serial.println("Bottom row");
+
+  Serial1.println("Bottom row");
   digitalWrite(BOTTOM_ROW, HIGH);
   delay(1000);
   digitalWrite(BOTTOM_ROW, LOW);
   delay(1000);
 
-  Serial.println("Middle row");
+  Serial1.println("Middle row");
   digitalWrite(MIDDLE_ROW, HIGH);
   delay(1000);
   digitalWrite(MIDDLE_ROW, LOW);
   delay(1000);
 
-  Serial.println("Top row");
+  Serial1.println("Top row");
   digitalWrite(TOP_ROW, HIGH);
   delay(1000);
   digitalWrite(TOP_ROW, LOW);
@@ -114,11 +179,11 @@ void loop()
   // pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
 
   // // Print the values on the serial monitor
-  // Serial.print(roll);
-  // Serial.print("/");
-  // Serial.print(pitch);
-  // Serial.print("/");
-  // Serial.println(yaw);
+  // Serial1.print(roll);
+  // Serial1.print("/");
+  // Serial1.print(pitch);
+  // Serial1.print("/");
+  // Serial1.println(yaw);
 }
 
 // void calculate_IMU_error()
@@ -165,14 +230,14 @@ void loop()
 //   GyroErrorY = GyroErrorY / 200;
 //   GyroErrorZ = GyroErrorZ / 200;
 //   // Print the error values on the Serial Monitor
-//   Serial.print("AccErrorX: ");
-//   Serial.println(AccErrorX);
-//   Serial.print("AccErrorY: ");
-//   Serial.println(AccErrorY);
-//   Serial.print("GyroErrorX: ");
-//   Serial.println(GyroErrorX);
-//   Serial.print("GyroErrorY: ");
-//   Serial.println(GyroErrorY);
-//   Serial.print("GyroErrorZ: ");
-//   Serial.println(GyroErrorZ);
+//   Serial1.print("AccErrorX: ");
+//   Serial1.println(AccErrorX);
+//   Serial1.print("AccErrorY: ");
+//   Serial1.println(AccErrorY);
+//   Serial1.print("GyroErrorX: ");
+//   Serial1.println(GyroErrorX);
+//   Serial1.print("GyroErrorY: ");
+//   Serial1.println(GyroErrorY);
+//   Serial1.print("GyroErrorZ: ");
+//   Serial1.println(GyroErrorZ);
 // }
