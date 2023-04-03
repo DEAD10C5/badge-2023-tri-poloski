@@ -20,7 +20,15 @@ const int MPU = 0x68; // MPU6050 I2C address
 void setup()
 {
   Serial.begin(57600);
+  Serial.println("#######################################");
+  Serial.println("# взаимоблокировщики Русский хардбасс #");
+  Serial.println("#######################################");
+  Serial.println("This badge was a lot of work and a lot of fun for us. Hope you enjoy it!");
+  Serial.println("...");
+  Serial.print("Version: ");
+  Serial.println(VERSION);
 
+  pinMode(12, OUTPUT);
   pinMode(BOTTOM_ROW, OUTPUT);
   pinMode(MIDDLE_ROW, OUTPUT);
   pinMode(TOP_ROW, OUTPUT);
@@ -50,13 +58,7 @@ void setup()
 
 void loop()
 {
-  Serial.println("#######################################");
-  Serial.println("# взаимоблокировщики Русский хардбасс #");
-  Serial.println("#######################################");
-  Serial.println("This badge was a lot of work and a lot of fun for us. Hope you enjoy it!");
-  Serial.println("...");
-  Serial.print("Version: ");
-  Serial.println(VERSION);
+
   digitalWrite(BOTTOM_ROW, HIGH);
   delay(100);
   digitalWrite(BOTTOM_ROW, LOW);

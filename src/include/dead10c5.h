@@ -31,8 +31,8 @@ Try to avoid D0 (pin 5) and D2 (pin 6) if you plan to use I2C.
 const uint8_t  DATA_PIN   = PA2; // pin8 RX
 const uint8_t  CLOCK_PIN  = PA4; // SCL pin9 TX
 
-const uint8_t  BOTTOM_ROW = PB0; // PB0 on pin2
-const uint8_t  MIDDLE_ROW = PB1; // PB1 on pin3
+const uint8_t  BOTTOM_ROW = PA0; // PB0 on pin2
+const uint8_t  MIDDLE_ROW = PA1; // PB1 on pin3
 const uint8_t  TOP_ROW = PB2; // PB2 on pin5
 
 // MPU6050
