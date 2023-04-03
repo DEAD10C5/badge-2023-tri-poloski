@@ -13,24 +13,32 @@
 #include "dead10c5.h"
 
 // DeadBadge deadbadge;
-//SoftwareSerial Serial(RX, TX);
+// SoftwareSerial Serial(RX, TX);
 
 const int MPU = 0x68; // MPU6050 I2C address
 
 void setup()
 {
   Serial.begin(57600);
+  Serial.println("#######################################");
+  Serial.println("# взаимоблокировщики Русский хардбасс #");
+  Serial.println("#######################################");
+  Serial.println("This badge was a lot of work and a lot of fun for us. Hope you enjoy it!");
+  Serial.println("...");
+  Serial.print("Version: ");
+  Serial.println(VERSION);
 
-  pinMode(2, OUTPUT); //BOTTOM
-  pinMode(3, OUTPUT); //MIDDLE
+  pinMode(2, OUTPUT); // BOTTOM
+  pinMode(3, OUTPUT); // MIDDLE
   pinMode(5, OUTPUT); // TOP
-  /*
+
   Wire.begin();                // Initialize comunication
   Wire.beginTransmission(MPU); // Start communication with MPU6050 // MPU=0x68
   Wire.write(0x6B);            // Talk to the register 6B
   Wire.write(0x00);            // Make reset - place a 0 into the 6B register
   Wire.endTransmission(true);  // end the transmission
 
+  /*
   // Configure Accelerometer Sensitivity - Full Scale Range (default +/- 2g)
   Wire.beginTransmission(MPU);
   Wire.write(0x1C);                  //Talk to the ACCEL_CONFIG register (1C hex)
@@ -44,31 +52,25 @@ void setup()
   delay(20);
   */
   // Call this function if you need to get the IMU error values for your module
-  //calculate_IMU_error();
-  //delay(20);
+  // calculate_IMU_error();
+  // delay(20);
 }
 
 void loop()
 {
-  Serial.begin(57600);
-  Serial.println("#######################################");
-  Serial.println("# взаимоблокировщики Русский хардбасс #");
-  Serial.println("#######################################");
-  Serial.println("This badge was a lot of work and a lot of fun for us. Hope you enjoy it!");
-  Serial.println("...");
-  Serial.print("Version: ");
-  Serial.println(VERSION);
-
+  Serial.println("Bottom row");
   digitalWrite(BOTTOM_ROW, HIGH);
   delay(1000);
   digitalWrite(BOTTOM_ROW, LOW);
   delay(1000);
-  
+
+  Serial.println("Middle row");
   digitalWrite(MIDDLE_ROW, HIGH);
   delay(1000);
   digitalWrite(MIDDLE_ROW, LOW);
   delay(1000);
 
+  Serial.println("Top row");
   digitalWrite(TOP_ROW, HIGH);
   delay(1000);
   digitalWrite(TOP_ROW, LOW);
@@ -115,8 +117,6 @@ void loop()
   // Serial.print(pitch);
   // Serial.print("/");
   // Serial.println(yaw);
-
-
 }
 
 // void calculate_IMU_error()

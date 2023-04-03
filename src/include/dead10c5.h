@@ -16,20 +16,20 @@
 #define VERSION "0.2"
 
 #define RX 8 // serial RX and TX pins.
-#define TX 9
+#define TX 9 // this pin is being used for serial as well?
 
 #include <Arduino.h> // default library for Arduino
-//#include <Wire.h> // used for the I2C communication
-//#include <TinyMPU6050.h> // maybe this one is smaller/easier to use? There are memory limits
+#include <Wire.h>    // used for the I2C communication
+// #include <TinyMPU6050.h> // maybe this one is smaller/easier to use? There are memory limits
 #include <SoftwareSerial.h> // used for serial output on the badge
 
 // pins'n'stuff
-const uint8_t  DATA_PIN   = PA2; // pin8 TX, white wire on USB, UART1
-const uint8_t  CLOCK_PIN  = PA4; // SCL pin9 RX, green wire on USB, UART1
+const uint8_t DATA_PIN = PA4;  // pin9 SCL/SCK
+const uint8_t CLOCK_PIN = PA5; // pin7 SDA
 
-const uint8_t  BOTTOM_ROW = PA0; // PB0 on pin2
-const uint8_t  MIDDLE_ROW = PA1; // PB1 on pin3
-const uint8_t  TOP_ROW = PB2; // PB2 on pin5
+const uint8_t BOTTOM_ROW = PA0; // PB0 on pin2
+const uint8_t MIDDLE_ROW = PA1; // PB1 on pin3
+const uint8_t TOP_ROW = PB2;    // PB2 on pin5
 
 // MPU6050
 float AccX, AccY, AccZ;
