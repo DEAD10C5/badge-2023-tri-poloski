@@ -2,7 +2,7 @@
 
 ## Flashing the Board
 
-
+Connect the pins.
 
 ## Serial Console
 
