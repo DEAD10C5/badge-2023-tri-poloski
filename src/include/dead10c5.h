@@ -32,4 +32,10 @@ unsigned long timeNow;
 boolean slavePresent = false;
 byte data = 0;
 
+#define SDA_PORT PORTA
+#define SDA_PIN PORTA0
+
+#define SCL_PORT PORTA
+#define SCL_PIN PORTA5
+
 #endif
