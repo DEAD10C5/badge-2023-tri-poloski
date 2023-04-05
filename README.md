@@ -11,6 +11,8 @@
 
 ## гопник badge - Путин хуйло
 
+![schematic](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/schematic-v2.png)
+
 ![art](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd2.png)
 
 ![routing](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd.png)
