@@ -1,5 +1,10 @@
 # Dev/Test Notes
 
+```sh
+platformio pkg install -l ArduinoNative
+platformio pkg install -l TinyWireM
+```
+
 ## Flashing the Board
 
 Connect the pins.
