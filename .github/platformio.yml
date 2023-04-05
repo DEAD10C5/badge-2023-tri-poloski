@@ -1,33 +1,33 @@
-# SPDX-FileCopyrightText: 2022 nerdyscout <https://github.com/nerdyscout/>
+# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <https://github.com/DEAD10C5/>
 #
 # SPDX-License-Identifier: CC0-1.0
 
-name: PlatformIO
+name: PlatformIO CI
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-    - src/**
-    - lib/**
-    - test/**
-  pull_request:
-    paths:
-    - src/**
-    - lib/**
-    - test/**
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        hardware_test: [test/hardware_test/hardware_test.ino, include/dead10c5.h]
+
     steps:
       - uses: actions/checkout@v3
-# https://github.com/karniv00l/platformio-run-action
-      - uses: karniv00l/platformio-run-action@1.1.1
-#        with:
-#          environments: ""
-#          targets: ""
-#          jobs: 6
-#          silent: false
-#          verbose: true
-#          disable-auto-clean: false
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.platformio/.cache
+          key: ${{ runner.os }}-pio
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Install PlatformIO Core
+        run: pip install --upgrade platformio
+
+      - name: Build PlatformIO examples
+        run: pio ci --board=attiny841
+        env:
+          PLATFORMIO_CI_SRC: ${{ matrix.hardware_test }}

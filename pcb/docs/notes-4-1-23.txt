@@ -71,4 +71,4 @@ For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 - Black wire: Connect to Battery port, negative (-) port.
 - Red/Orange wire: Do not connect! This is +5V but the board is at +3V.
 
-TERM=linux minicom -D /dev/ttyUSB0 
+TERM=linux minicom -D /dev/ttyUSB0 -b 9600
