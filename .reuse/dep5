@@ -3,7 +3,7 @@ Upstream-Name: badge-2023-tri-poloski
 Upstream-Contact: DE:AD:10:C5 <devsecfranklin@duck.com>
 Source: github.com/DEAD10C5/badge-2023-tri-poloski
 
-Files: pcb/*
+Files: .pio/* pcb/*
 Copyright: 2023, DE:AD:10:C5 <devsecfranklin@duck.com>
 License: CERN-OHL-P-2.0
 

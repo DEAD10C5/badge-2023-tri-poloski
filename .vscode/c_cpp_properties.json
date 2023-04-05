@@ -1,20 +1,42 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "PlatformIO",
             "includePath": [
-                "${workspaceFolder}/**"
+                "/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/include",
+                "/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/src",
+                ""
             ],
-            "defines": [],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "linux-clang-x64",
             "browse": {
+                "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "src/libraries"
+                    "/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/include",
+                    "/home/franklin/workspace/dead10c5/badge-2023-tri-poloski/src",
+                    ""
                 ]
-            }
+            },
+            "defines": [
+                "F_CPU=8000000L",
+                "PLATFORMIO=60106",
+                "ARDUINO_AVR_ATTINYX41",
+                "LOWERCAL",
+                "WIRE_MASTER_ONLY",
+                "NEW_PINOUT",
+                "__AVR_ATtiny841__",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/franklin/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=attiny841",
+                ""
+            ]
         }
     ],
     "version": 4
