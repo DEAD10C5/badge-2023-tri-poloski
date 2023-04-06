@@ -16,26 +16,14 @@
 
 #define VERSION "v0.2 - 03 April 2023 - гопник badge - Путин хуйло"
 
-#include <Arduino.h> // default library for Arduino
+#include <Arduino.h>  // default library for Arduino
 // #include <Wire.h>           // used for the I2C communication
-#include <SoftwareSerial.h> // used for serial output on the badge
+#include <SoftwareSerial.h>  // used for serial output on the badge
 // #include <TinyI2CMaster.h> // this one says it is not compatible with 841
-#include "TinyWireM.h"
+// #include "TinyWireM.h"
 
-const uint8_t BOTTOM_ROW = PA0; // PB0 on pin2
-const uint8_t MIDDLE_ROW = PA1; // PB1 on pin3
-const uint8_t TOP_ROW = PB2;    // PB2 on pin5
-
-// MPU6050 https://github.com/nadavmatalon/TinyWireM/tree/master/examples/TinyWireM_example/ATtiny841_Master
-const byte SLAVE_ADDR = 100;
-unsigned long timeNow;
-boolean slavePresent = false;
-byte data = 0;
-
-#define SDA_PORT PORTA
-#define SDA_PIN PORTA0
-
-#define SCL_PORT PORTA
-#define SCL_PIN PORTA5
+const uint8_t BOTTOM_ROW = PA0;  // PB0 on pin2
+const uint8_t MIDDLE_ROW = PA1;  // PB1 on pin3
+const uint8_t TOP_ROW = PB2;     // PB2 on pin5
 
 #endif
