@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "dead10c5")(type "KiCad")(uri "${KIPRJMOD}/footprints/dead10c5.kicad_sym")(options "")(descr ""))
-  (lib (name "resistor_smd")(type "KiCad")(uri "/home/franklin/workspace/dead10c5/badge-esp32-breakout/v2/libraries/resistor_smd.kicad_sym")(options "")(descr ""))
-)
