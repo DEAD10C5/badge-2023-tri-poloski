@@ -22,7 +22,7 @@
             },
             "defines": [
                 "F_CPU=8000000L",
-                "PLATFORMIO=60106",
+                "PLATFORMIO=60107",
                 "ARDUINO_AVR_ATTINYX41",
                 "LOWERCAL",
                 "WIRE_MASTER_ONLY",
