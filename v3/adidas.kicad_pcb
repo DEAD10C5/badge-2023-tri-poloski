@@ -3366,7 +3366,7 @@
   (gr_text "+" (at 150.9522 134.493) (layer "B.SilkS") (tstamp cb408463-e14c-4370-9bb4-fc79d7b9d50e)
     (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom mirror))
   )
-  (gr_text ":: THE @DEAD10C5 LOVE YOU ::\n@iamgaraf\nyaya_pancho\n@craigmucka\nHermit\ny3t1\n@p0lr_\n@thedevilsvoice" (at 186.1566 135.763) (layer "B.SilkS") (tstamp f10728e8-c72d-4ebf-98ec-0e333d791260)
+  (gr_text ":: THE @DEAD10C5 LOVE YOU ::\njustinjustin\nyaya_pancho\n@craigmucka\nHermit\ny3t1\n@p0lr_\n@thedevilsvoice" (at 186.1566 135.763) (layer "B.SilkS") (tstamp f10728e8-c72d-4ebf-98ec-0e333d791260)
     (effects (font (size 0.5 0.5) (thickness 0.075)) (justify mirror))
   )
   (dimension (type aligned) (layer "B.Cu") (tstamp cf2d311d-3ef8-4d48-855c-fe9ff8499c14)
