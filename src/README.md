@@ -20,3 +20,15 @@
 ## MPU6050
 
 - [Arduino and MPU6050 Accelerometer and Gyroscope Tutorial](https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/)
+- [How to Interface Arduino and the MPU 6050 Sensor](https://maker.pro/arduino/tutorial/how-to-interface-arduino-and-the-mpu-6050-sensor)
+
+### How Does IMU Interfacing Work?
+
+IMU (inertia measurement unit) sensors usually consist of two or more
+parts. Listing them by priority, they
+are the accelerometer, gyroscope, magnetometer, and altimeter. The MPU 6050 is a
+6 DOF (degrees of freedom) or a six-axis IMU sensor, which means that it gives
+six values as output: three values from the accelerometer and three from the
+gyroscope. The MPU 6050 is a sensor based on MEMS (micro electro mechanical
+systems) technology. Both the accelerometer and the gyroscope are embedded inside a
+single chip. This chip uses I2C (inter-integrated circuit) protocol for communication.

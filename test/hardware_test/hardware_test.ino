@@ -7,7 +7,9 @@
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
 
 
-   Author : @theDevilsVoice https://twitter.com/dead10c5
+# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
    Date   : April 3, 2023
    Version: 0.2
 */
