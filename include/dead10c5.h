@@ -7,7 +7,10 @@
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
 
 
-   Author : @theDevilsVoice https://twitter.com/dead10c5
+# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
    Date   : April 3, 2023
    Version: 0.2
 */
@@ -16,14 +19,14 @@
 
 #define VERSION "v0.2 - 03 April 2023 - гопник badge - Путин хуйло"
 
-#include <Arduino.h>  // default library for Arduino
+#include <Arduino.h> // default library for Arduino
 // #include <Wire.h>           // used for the I2C communication
-#include <SoftwareSerial.h>  // used for serial output on the badge
+#include <SoftwareSerial.h> // used for serial output on the badge
 // #include <TinyI2CMaster.h> // this one says it is not compatible with 841
 // #include "TinyWireM.h"
 
-const uint8_t BOTTOM_ROW = PA0;  // PB0 on pin2
-const uint8_t MIDDLE_ROW = PA1;  // PB1 on pin3
-const uint8_t TOP_ROW = PB2;     // PB2 on pin5
+const uint8_t BOTTOM_ROW = PA0; // PB0 on pin2
+const uint8_t MIDDLE_ROW = PA1; // PB1 on pin3
+const uint8_t TOP_ROW = PB2;    // PB2 on pin5
 
 #endif
