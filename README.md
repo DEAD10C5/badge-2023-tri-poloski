@@ -6,17 +6,18 @@
 
 - Concept: Yaya Pancho
 - Translations: @muscovitebob
-- Hardware: @p0lr_ @thedevilsvoice
-- Software: @thedevilsvoice
+- Puzzle: Hermit
+- Hardware: [p0lr](mailto:p0lr@dead10c5.org) [@thedevilsvoice](mailto:thedevilsvoice@dead10c5.org)
+- Software: [p0lr](mailto:p0lr@dead10c5.org) [@thedevilsvoice](mailto:thedevilsvoice@dead10c5.org)
 
 ## гопник badge - Путин хуйло
 
-![schematic](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/schematic-v2.png)
+![schematic](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/schematic-v2.png?raw=true)
 
-![art](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd2.png)
+![art](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd2.png?raw=true)
 
-![routing](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd.png)
+![routing](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-brd.png?raw=true)
 
-![front](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-front-3d-v2.png)
+![front](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-front-3d-v2.png?raw=true)
 
-![back](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-back-3d-v2.png)
+![back](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/adidas-back-3d-v2.png?raw=true)
