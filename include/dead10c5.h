@@ -7,12 +7,12 @@
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
 
 
-# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
+  # SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
+  #
+  # SPDX-License-Identifier: GPL-3.0-or-later
 
-   Date   : April 3, 2023
-   Version: 0.2
+   Date   : May 13, 2023
+   Version: 0.3
 */
 #ifndef DEAD10C5_H
 #define DEAD10C5
@@ -20,13 +20,19 @@
 #define VERSION "v0.2 - 03 April 2023 - гопник badge - Путин хуйло"
 
 #include <Arduino.h> // default library for Arduino
-// #include <Wire.h>           // used for the I2C communication
-#include <SoftwareSerial.h> // used for serial output on the badge
-// #include <TinyI2CMaster.h> // this one says it is not compatible with 841
-// #include "TinyWireM.h"
+#include <TinyMPU6050.h>
 
 const uint8_t BOTTOM_ROW = PA0; // PB0 on pin2
 const uint8_t MIDDLE_ROW = PA1; // PB1 on pin3
 const uint8_t TOP_ROW = PB2;    // PB2 on pin5
+
+MPU6050 mpu(Wire);
+
+struct offsets
+{
+  float x;
+  float y;
+  float z;
+};
 
 #endif

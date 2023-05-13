@@ -5,6 +5,8 @@ platformio pkg install -l ArduinoNative
 platformio pkg install -l TinyWireM
 ```
 
+- [TinyMPU6050](https://github.com/gabriel-milan/TinyMPU6050)
+
 ## Flashing the Board
 
 Connect the pins.
