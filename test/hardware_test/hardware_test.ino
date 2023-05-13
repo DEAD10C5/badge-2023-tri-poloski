@@ -49,9 +49,9 @@ void loop()
 
 void lights(int x)
 {
-  digitalWrite(BOTTOM_ROW, HIGH);
-  digitalWrite(MIDDLE_ROW, HIGH);
-  digitalWrite(TOP_ROW, HIGH);
+  digitalWrite(BOTTOM_ROW, x);
+  digitalWrite(MIDDLE_ROW, x);
+  digitalWrite(TOP_ROW, x);
   delay(100);
 }
 

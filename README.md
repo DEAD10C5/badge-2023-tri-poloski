@@ -7,8 +7,8 @@
 - Concept: Yaya Pancho
 - Translations: @muscovitebob
 - Puzzle: Hermit
-- Hardware: @p0lr_ @thedevilsvoice
-- Software: @thedevilsvoice
+- Hardware: [p0lr](mailto:p0lr@dead10c5.org) [@thedevilsvoice](mailto:thedevilsvoice@dead10c5.org)
+- Software: [p0lr](mailto:p0lr@dead10c5.org) [@thedevilsvoice](mailto:thedevilsvoice@dead10c5.org)
 
 ## гопник badge - Путин хуйло
 
