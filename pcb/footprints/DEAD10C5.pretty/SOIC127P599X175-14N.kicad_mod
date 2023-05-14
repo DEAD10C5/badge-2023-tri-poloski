@@ -1,13 +1,11 @@
-(footprint "SOIC127P599X175-14N" (version 20221018) (generator pcbnew)
+(footprint "SOIC127P599X175-14N" (version 20230410) (generator pcbnew)
   (layer "F.Cu")
   (attr smd)
-  (fp_text reference "REF**" (at -0.79 -5.237) (layer "F.SilkS") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 7a8be6e7-fcde-4b6a-8f58-dcb568dbd523)
+  (fp_text reference "REF**" (at -0.79 -5.237) (layer "F.SilkS") hide (tstamp 7a8be6e7-fcde-4b6a-8f58-dcb568dbd523)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value "SOIC127P599X175-14N" (at 8.1 5.237) (layer "F.Fab") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 4149e57f-38b2-4e55-9f4d-cf8b25689e8a)
+  (fp_text value "SOIC127P599X175-14N" (at 8.1 5.237) (layer "F.Fab") hide (tstamp 4149e57f-38b2-4e55-9f4d-cf8b25689e8a)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start -1.9475 -4.425) (end 1.9475 -4.425)
     (stroke (width 0.127) (type solid)) (layer "F.SilkS") (tstamp 23709dfb-1bc5-46b8-a190-cdb269a9627f))
@@ -47,4 +45,9 @@
   (pad "12" smd roundrect (at 2.47 -1.27) (size 1.97 0.59) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.07) (tstamp f738e88c-856d-4fca-a67e-9cb079a78e02))
   (pad "13" smd roundrect (at 2.47 -2.54) (size 1.97 0.59) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.07) (tstamp 9afb739f-35ba-4363-9bb4-82938b43f45a))
   (pad "14" smd roundrect (at 2.47 -3.81) (size 1.97 0.59) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.07) (tstamp fc7a5c39-1454-478f-b957-532836a20d2c))
+  (model "${KIPRJMOD}/3d/ATTINY841-SSU.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )

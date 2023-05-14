@@ -1,4 +1,4 @@
-(footprint "SW_TL1107BF130WQ" (version 20221018) (generator pcbnew)
+(footprint "SW_TL1107BF130WQ" (version 20230410) (generator pcbnew)
   (layer "F.Cu")
   (attr through_hole)
   (fp_text reference "REF**" (at -1.3 -3.635) (layer "F.SilkS") (tstamp efdc0643-ab41-402c-bad3-62343f53b75d)
@@ -41,4 +41,9 @@
     (stroke (width 0.2) (type solid)) (fill none) (layer "F.Fab") (tstamp e081997f-03ee-4b62-9e49-301e55d2675f))
   (pad "1" thru_hole rect (at -3.25 0) (size 1.95 1.95) (drill 1.3) (layers "*.Cu" "*.Mask") (tstamp 82ac594a-2228-46dc-b62f-7af284aaabfb))
   (pad "2" thru_hole circle (at 3.25 0) (size 1.95 1.95) (drill 1.3) (layers "*.Cu" "*.Mask") (tstamp ba869180-bcb4-4629-b1ab-97dc5cbe4151))
+  (model "${KIPRJMOD}/3d/TL1107BF130WQ.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )
