@@ -45,3 +45,5 @@ java -jar /opt/layout/bin/freeRouting.jar
 - You might be able to use the other pin copnnectors on the board but it is a lot flakier than the clips.
 
 ![Chip pins](https://github.com/DEAD10C5/badge-project-template/blob/main/pcb/docs/images/clip.jpg?raw=true)
+
+![chip](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/pcb/docs/images/T-U23W61080A/BACK-ATTTINY.png?raw=true)
