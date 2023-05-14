@@ -7,7 +7,11 @@ Generate the Gerbers like so:
 
 [FreeRouting](https://github.com/freerouting/freerouting)
 
-## Setup
+1. From the main KiCAD window, select the "Plugin and Contect Manager"
+2. Install the "Freerouting" plug in.
+3. Install the "PCBWay plug in for KiCAD"
+
+## Chip Setup
 
 - Install Arduino IDE.
 - Click `file -> Preferences`
@@ -18,6 +22,10 @@ Generate the Gerbers like so:
 - Select one of the ATTiny 441/841 board types.
 
 ## Libraries
+
+- Save these zip files to the `Arduino/libraries` folder.
+- Unzip them.
+- You might need to restart KiCAD.
 
 - [ATTinyCore Universal](https://github.com/SpenceKonde/ATTinyCore)
 - [TinyMPU6050](https://github.com/gabriel-milan/TinyMPU6050)
