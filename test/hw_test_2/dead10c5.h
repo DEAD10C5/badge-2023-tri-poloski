@@ -11,20 +11,18 @@
   #
   # SPDX-License-Identifier: GPL-3.0-or-later
 
-   Date   : May 13, 2023
-   Version: 0.3
+   Date   : May 15, 2023
+   Version: 0.1
 */
 #ifndef DEAD10C5_H
 #define DEAD10C5
 
-#define VERSION "v0.2 - 03 April 2023 - гопник badge - Путин хуйло"
+#define VERSION "v0.1 - 15 May 2023 - гопник badge - Путин хуйло"
 
-#include <Arduino.h>  // default library for Arduino
-#include <TinyMPU6050.h>
+#include <Arduino.h>
+#include <Wire.h>
 
-
-/*
- * You can specify TX_PIN here (before the line #include "ATtinySerialOut.hpp")
+/* You can specify TX_PIN here (before the line #include "ATtinySerialOut.hpp")
 
    I HAVE NO IDEA IF THESE PINS ARE CORRECT, PLS VERIFY
  */
@@ -33,14 +31,13 @@
 #else
 #define TX_PIN PB2  // (package pin 7 on Tiny85) - can use one of PB0 to PB4 (+PB5) here
 #endif
-
 #include "ATtinySerialOut.hpp"
+
+#define MPU6050_ADDR 0x68
 
 const uint8_t BOTTOM_ROW = PA0;  // PB0 on pin2
 const uint8_t MIDDLE_ROW = PA1;  // PB1 on pin3
 const uint8_t TOP_ROW = PB2;     // PB2 on pin5
-
-MPU6050 mpu(Wire);
 
 // use this struct to get data back from MPU6050
 struct offsets {
