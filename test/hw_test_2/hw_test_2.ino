@@ -10,7 +10,7 @@
   # SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
   #
   # SPDX-License-Identifier: GPL-3.0-or-later
-  
+
   Date   : May 13, 2023
   Version: 0.3
 */
@@ -18,7 +18,7 @@
 #include "dead10c5.h"
 
 void setup() {
-  Serial.println(F("Using library version "));
+  Serial.println(F("Using library version " VERSION));
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B);
@@ -62,7 +62,7 @@ void loop() {
   Serial.print(", ");
   Serial.println(gz);
 
-  delay(1000);
+  delay(200);
 
   lights(1);
 }

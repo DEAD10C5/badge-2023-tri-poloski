@@ -53,7 +53,6 @@ Once you burn the bootloader to the chip, you can reflash many times using the e
 
 [Add the ATTINY 841 using these directions](https://github.com/SpenceKonde/ATTinyCore/blob/v2.0.0-devThis-is-the-head-submit-PRs-against-this/Installation.md#boards-manager-installation)
 
-
 [SparkFun FT231X Breakout](https://www.sparkfun.com/products/13263)
 
 ## Serial Console
@@ -66,10 +65,18 @@ pin10 SS
 You can make a serial connection to the badge using a USB to TTL serial cable.
 For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
-- Green wire: Connect to serial port, right side looking at back.
-- White wire: Connect to serial port, left side looking at back.
-- Black wire: Connect to Battery port, negative (-) port.
-- Red/Orange wire: Do not connect! This is +5V but the board is at +3V.
+### Flashing
 
-TERM=linux minicom -D /dev/ttyUSB0 
+- Green wire: Connect to serial port, white RX pin 9
+- White wire: Connect to serial port, green TX pin 8
+- Black wire: Connect to Battery pin1, negative (-) port.
+- Red/Orange wire: pin14 (+)
 
+### Serial
+
+- Green wire: Connect to serial port, white SCL pin 9
+- White wire: Connect to serial port, green SDA pin 7
+- Black wire: Connect to Battery pin1, negative (-) port.
+- Red/Orange wire: pin14 (+)
+
+TERM=linux minicom -D /dev/ttyUSB0
