@@ -2,6 +2,8 @@
 # Format documentation: http://kicad-pcb.org/help/file-formats/
 
 kicad/adidas.xml
+test/**/html
+test/**/latex
 
 # Temporary files
 \#auto_saved_files#

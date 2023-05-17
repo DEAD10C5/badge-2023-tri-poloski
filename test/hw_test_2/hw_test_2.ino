@@ -17,7 +17,8 @@
 
 #include "dead10c5.h"
 
-void setup() {
+void setup()
+{
   Serial.println(F("Using library version " VERSION));
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
@@ -29,24 +30,50 @@ void setup() {
   pinMode(TOP_ROW, OUTPUT);
 }
 
-void loop() {
+void loop()
+{
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
   Wire.endTransmission();
   Wire.requestFrom(MPU6050_ADDR, 14);
 
-  int16_t ax, ay, az;
-  int16_t gx, gy, gz;
 
+  int16_t gx, gy, gz;
+  gx = Wire.read() << 8 | Wire.read();
+  gy = Wire.read() << 8 | Wire.read();
+  gz = Wire.read() << 8 | Wire.read();
+  
+  int16_t ax, ay, az;
   ax = Wire.read() << 8 | Wire.read();
   ay = Wire.read() << 8 | Wire.read();
   az = Wire.read() << 8 | Wire.read();
 
-  gx = Wire.read() << 8 | Wire.read();
-  gy = Wire.read() << 8 | Wire.read();
-  gz = Wire.read() << 8 | Wire.read();
+  if (ay < 0)
+  {
+    blink(BOTTOM_ROW, 5);
+  }
+  else if (ay > 0)
+  {
+    blink(TOP_ROW, 5);
+  }
+  else
+  {
+    blink(MIDDLE_ROW, 5);
+  }
+}
+void blink(int row, int count)
+{
+  for (int x = 0; x <= count; x++)
+  {
+    digitalWrite(row, 1);
+    delay(75);
+    digitalWrite(row, 0);
+    delay(75);
+  }
+}
 
-  lights(0); 
+/*
+  lights(0);
 
   Serial.print("Accelerometer: ");
   Serial.print(ax);
@@ -61,13 +88,12 @@ void loop() {
   Serial.print(gy);
   Serial.print(", ");
   Serial.println(gz);
-
   delay(200);
-
   lights(1);
-}
+} */
 
-void lights(int x) {
+void lights(int x)
+{
   digitalWrite(BOTTOM_ROW, x);
   digitalWrite(MIDDLE_ROW, x);
   digitalWrite(TOP_ROW, x);
