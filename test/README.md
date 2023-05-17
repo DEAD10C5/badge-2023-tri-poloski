@@ -3,9 +3,9 @@
 3. Can the chip be programmed while it is attached to the board? Depends on connections?
 4. the switch is not needed with "regular" LED. Could still be used for blink patterns?
 5. Break out all the pins from the chip from now on. That way you can still prototype
-   if there is some issue with the circuits. 
+   if there is some issue with the circuits.
 
-we can use the "optiboot" core and program the chip using USB to serial converter. 
+we can use the "optiboot" core and program the chip using USB to serial converter.
 
 ## Burn Bootloader
 
@@ -45,7 +45,6 @@ For USB to TTL, while viewing the BACK of the board:
 
 Connect board, burn bootloader from board menu.
 Then you can start uploading sketches
-
 
 ## Programming
 
