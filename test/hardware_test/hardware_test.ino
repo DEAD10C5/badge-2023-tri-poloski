@@ -7,18 +7,20 @@
    |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
 
 
-# SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
-   Date   : May 13, 2023
-   Version: 0.3
+  # SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <thedevilsvoice@dead10c5.org>
+  #
+  # SPDX-License-Identifier: GPL-3.0-or-later
+  Date   : May 13, 2023
+  Version: 0.3
 */
 
 #include "dead10c5.h"
 
-void setup()
-{
-  //Serial1.begin(9600); // could probably bump this speed high, not sure why though
+void setup() {
+  Serial1.begin(9600); // could probably bump this speed high, not sure why though
+  //initTXPin();
+  //Serial.println(F("Using library version "));
+
   mpu.Initialize();
   mpu.Calibrate();
   /*
@@ -36,27 +38,25 @@ void setup()
   pinMode(TOP_ROW, OUTPUT);
 }
 
-void loop()
-{
+void loop() {
   mpu.Execute();
   struct offsets myOffsets;
 
   myOffsets = getOffsets();
 
   lights(0);
+  Serial1.println(myOffsets.y);
   lights(1);
 }
 
-void lights(int x)
-{
+void lights(int x) {
   digitalWrite(BOTTOM_ROW, x);
   digitalWrite(MIDDLE_ROW, x);
   digitalWrite(TOP_ROW, x);
   delay(100);
 }
 
-struct offsets getOffsets()
-{
+struct offsets getOffsets() {
   struct offsets myOffsets;
 
   myOffsets.x = mpu.GetGyroXOffset();
