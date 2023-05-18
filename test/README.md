@@ -38,6 +38,7 @@ Choose board ATtiny441/841 with Optiboot. This allows programming via USB to Ser
 Programmer: ATtiny as ISP (ATtiny Core)
 
 For USB to TTL, while viewing the BACK of the board:
+
 - Green/Grey wire: TX out of the USB port, RX on the chip, connect to bottom center pin on ISP header next to green/grey.
 - White wire: RX into USB port, TX on the chip, connect bottom left (below power).
 - Black wire: Connect to negative (-) port on back, top right of ISP header.
