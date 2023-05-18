@@ -17,9 +17,9 @@
 #include "dead10c5.h"
 
 void setup() {
-  //Serial1.begin(9600); // could probably bump this speed high, not sure why though
+  Serial1.begin(9600); // could probably bump this speed high, not sure why though
   //initTXPin();
-  Serial.println(F("Using library version "));
+  //Serial.println(F("Using library version "));
 
   mpu.Initialize();
   mpu.Calibrate();
@@ -45,6 +45,7 @@ void loop() {
   myOffsets = getOffsets();
 
   lights(0);
+  Serial1.println(myOffsets.y);
   lights(1);
 }
 

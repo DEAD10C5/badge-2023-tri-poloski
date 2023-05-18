@@ -66,15 +66,15 @@ For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
 ### Flashing
 
-- Green wire: Connect to serial port, white RX pin 9
-- White wire: Connect to serial port, green TX pin 8
+- Green wire: Connect to serial port, white TX pin 8
+- White wire: Connect to serial port, green RX pin 9
 - Black wire: Connect to Battery pin1, negative (-) port.
 - Red/Orange wire: pin14 (+)
 
 ### Serial
 
 - Green wire: Connect to serial port, white SCL pin 12
-- White wire: Connect to serial port, green SDA pin 9
+- White wire: Connect to serial port, green SCK pin 9
 - Black wire: Connect to Battery, negative (-) pin1
 - Red/Orange wire: Battery, positive (+) pin14
 

@@ -19,12 +19,14 @@
 
 void setup()
 {
-  Serial.println(F("Using library version " VERSION));
+  Serial.begin(9600);
+
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B);
   Wire.write(0x00);
   Wire.endTransmission();
+
   pinMode(BOTTOM_ROW, OUTPUT);
   pinMode(MIDDLE_ROW, OUTPUT);
   pinMode(TOP_ROW, OUTPUT);
@@ -48,28 +50,45 @@ void loop()
   ay = Wire.read() << 8 | Wire.read();
   az = Wire.read() << 8 | Wire.read();
 
-  if (ay < 0)
-  {
-    blink(BOTTOM_ROW, 5);
-  }
-  else if (ay > 0)
-  {
-    blink(TOP_ROW, 5);
-  }
-  else
-  {
-    blink(MIDDLE_ROW, 5);
-  }
-}
-void blink(int row, int count)
-{
-  for (int x = 0; x <= count; x++)
-  {
-    digitalWrite(row, 1);
-    delay(75);
-    digitalWrite(row, 0);
-    delay(75);
-  }
+  Serial.print("Accelerometer: ");
+  Serial.print(ax);
+  Serial.print(", ");
+  Serial.print(ay);
+  Serial.print(", ");
+  Serial.println(az);
+
+  Serial.print("Gyroscope: ");
+  Serial.print(gx);
+  Serial.print(", ");
+  Serial.print(gy);
+  Serial.print(", ");
+  Serial.println(gz);
+
+//   Serial.print("ay: ");
+//   Serial.println(ay);
+
+//   if (ay < 0)
+//   {
+//     blink(BOTTOM_ROW, 5);
+//   }
+//   else if (ay > 0)
+//   {
+//     blink(TOP_ROW, 5);
+//   }
+//   else
+//   {
+//     blink(MIDDLE_ROW, 5);
+//   }
+// }
+// void blink(int row, int count)
+// {
+//   for (int x = 0; x <= count; x++)
+//   {
+//     digitalWrite(row, 1);
+//     delay(75);
+//     digitalWrite(row, 0);
+//     delay(75);
+//   }
 }
 
 /*
@@ -97,5 +116,5 @@ void lights(int x)
   digitalWrite(BOTTOM_ROW, x);
   digitalWrite(MIDDLE_ROW, x);
   digitalWrite(TOP_ROW, x);
-  delay(100);
+  delay(50);
 }
