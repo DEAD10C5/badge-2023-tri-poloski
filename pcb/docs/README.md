@@ -25,7 +25,9 @@ java -jar /opt/layout/bin/freeRouting.jar
 - Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
   `ATTinyCore` is installed.
   - Install version 1.5.2 or later.
-- Select one of the ATTiny 441/841 board types.
+- Click on `Tools -> Board -> ATTinyCore` and select one of the ATTiny 441/841 board types.
+- Click on `File -> Open` and select the `test/accelerometer_test.ino file` in this repo
+- A dialog appears asking if you want to create a folder and move the file, press `OK`
 
 ![Board Settings](images/20230513_213218.jpg?raw=true)
 
