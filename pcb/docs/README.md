@@ -19,10 +19,11 @@ java -jar /opt/layout/bin/freeRouting.jar
 ## Chip Setup
 
 - Install Arduino IDE.
-- Click `file -> Preferences`
+- Click `file -> Preferences` (on MacOS `Arduino -> Settings`)
 - Add this to `Additional Boards manager URLS`: `http://drazzy.com/package_drazzy.com_index.json`
 - Click `ok`
-- Click on `Tools -> Boards Manager` and make sure `ATTinyCore` is installed.
+- Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
+  `ATTinyCore` is installed.
   - Install version 1.5.2 or later.
 - Select one of the ATTiny 441/841 board types.
 
