@@ -19,7 +19,7 @@ java -jar /opt/layout/bin/freeRouting.jar
 ## Chip Setup
 
 - Install Arduino IDE.
-- Click `file -> Preferences` (on MacOS `Arduino -> Settings`)
+- Click `file -> Preferences` (on MacOS `Arduino IDE -> Settings`)
 - Add this to `Additional Boards manager URLS`: `http://drazzy.com/package_drazzy.com_index.json`
 - Click `ok`
 - Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
