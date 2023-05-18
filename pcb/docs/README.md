@@ -28,7 +28,7 @@ java -jar /opt/layout/bin/freeRouting.jar
 - Click on `Tools -> Board -> ATTinyCore` and select one of the ATTiny 441/841 board types.
 - Click on `File -> Open` and select the `test/accelerometer_test.ino file` in this repo
 - A dialog appears asking if you want to create a folder and move the file, press `OK`
-- Click on `Sketch -> Include Library -> Manage Libraries`. In the search bar, type "TinyMPU6050" 
+- Click on `Sketch -> Include Library -> Manage Libraries`. In the search bar, type "TinyMPU6050"
   and click the `INSTALL` button
 - Start a build by pressing the button with the checkmark in the upper left of the window
 
