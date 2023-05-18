@@ -73,9 +73,9 @@ For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
 ### Serial
 
-- Green wire: Connect to serial port, white SCL pin 9
-- White wire: Connect to serial port, green SDA pin 7
-- Black wire: Connect to Battery pin1, negative (-) port.
-- Red/Orange wire: pin14 (+)
+- Green wire: Connect to serial port, white SCL pin 12
+- White wire: Connect to serial port, green SDA pin 9
+- Black wire: Connect to Battery, negative (-) pin1
+- Red/Orange wire: Battery, positive (+) pin14
 
 TERM=linux minicom -D /dev/ttyUSB0

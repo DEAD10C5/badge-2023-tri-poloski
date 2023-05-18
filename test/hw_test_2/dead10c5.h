@@ -22,7 +22,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-//#define TX_PIN PA5 // You can specify TX_PIN here (before the line #include "ATtinySerialOut.hpp")
+#define TX_PIN PA5 // You can specify TX_PIN here (before the line #include "ATtinySerialOut.hpp")
 #include "ATtinySerialOut.hpp"
 
 #define MPU6050_ADDR 0x68
