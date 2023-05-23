@@ -19,12 +19,18 @@ java -jar /opt/layout/bin/freeRouting.jar
 ## Chip Setup
 
 - Install Arduino IDE.
-- Click `file -> Preferences`
+- Click `file -> Preferences` (on MacOS `Arduino IDE -> Settings`)
 - Add this to `Additional Boards manager URLS`: `http://drazzy.com/package_drazzy.com_index.json`
 - Click `ok`
-- Click on `Tools -> Boards Manager` and make sure `ATTinyCore` is installed.
+- Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
+  `ATTinyCore` is installed.
   - Install version 1.5.2 or later.
-- Select one of the ATTiny 441/841 board types.
+- Click on `Tools -> Board -> ATTinyCore` and select one of the ATTiny 441/841 board types.
+- Click on `File -> Open` and select the `test/accelerometer_test.ino file` in this repo
+- A dialog appears asking if you want to create a folder and move the file, press `OK`
+- Click on `Sketch -> Include Library -> Manage Libraries`. In the search bar, type "TinyMPU6050"
+  and click the `INSTALL` button
+- Start a build by pressing the button with the checkmark in the upper left of the window
 
 ![Board Settings](images/20230513_213218.jpg?raw=true)
 
