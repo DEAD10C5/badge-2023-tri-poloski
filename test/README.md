@@ -6,7 +6,7 @@ Configure the Arduino IDE for use with the ATTiny841 chip.
 
 - Install Arduino IDE.
 - Click `file -> Preferences` (on MacOS `Arduino IDE -> Settings`)
-- Add this to `Additional Boards manager URLS`: 
+- Add this to `Additional Boards manager URLS`:
   `http://drazzy.com/package_drazzy.com_index.json`
 - Click `ok`
 - Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
@@ -50,8 +50,8 @@ const uint8_t  DATA_PIN   = PA5; // pin 8
 const uint8_t  CLOCK_PIN  = PA4; // SCL pin 9
 ```
 
-Choose board ATtiny441/841 with Optiboot. This allows programming via USB
-to Serial cable not just ISP header. 
+Choose board ATtiny441/841 with Optiboot. This allows programming
+via USB to Serial cable not just ISP header.
 
 - Programmer: ATtiny as ISP (ATtiny Core)
 
