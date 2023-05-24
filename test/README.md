@@ -33,8 +33,6 @@
 - Upload the `src/ArduinoISP` sketch to the Arduino UNO.
 - Connect board and "get board info", you should see serial number.
 
-
-
 Choose Bootloader UART1 if you are using ISP header programming since the TX is on pin 8 and the RX is on pin 9.
 
 const uint8_t  DATA_PIN   = PA5; // pin 8

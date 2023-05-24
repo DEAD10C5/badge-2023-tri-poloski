@@ -16,6 +16,4 @@ locate freeRouting.jar
 java -jar /opt/layout/bin/freeRouting.jar
 ```
 
-
-
 ![Board Settings](images/20230513_213218.jpg?raw=true)
