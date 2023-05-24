@@ -49,13 +49,26 @@ Then you can start uploading sketches
 
 ## Programming
 
-Once you burn the bootloader to the chip, you can reflash many times using the easy USB to TTL cable.
+- [Add the ATTINY 841 using these directions](https://github.com/SpenceKonde/ATTinyCore/blob/v2.0.0-devThis-is-the-head-submit-PRs-against-this/Installation.md#boards-manager-installation)
+- [SparkFun FT231X Breakout](https://www.sparkfun.com/products/13263)
 
-[Add the ATTINY 841 using these directions](https://github.com/SpenceKonde/ATTinyCore/blob/v2.0.0-devThis-is-the-head-submit-PRs-against-this/Installation.md#boards-manager-installation)
+### Install Libraries
 
-[SparkFun FT231X Breakout](https://www.sparkfun.com/products/13263)
+- [TinyMPU6050](https://github.com/gabriel-milan/TinyMPU6050)
 
 ## Serial Console
+
+You can make a serial connection to the badge using a USB to TTL serial cable.
+For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
+
+There is a six pin (2x3) header on the right side of the board when viewed from the back.
+
+| wire | description |
+| --- | --- |
+| Black GROUND wire | Connect to Battery port, negative (-) port.
+| Red/Orange POWER wire | Connect to Battery port, positive (+) port. |
+| Green wire | Connect to serial port. |
+| White wire | Connect to serial port, left side looking at back. |
 
 pin13 SCK
 pin12 MISO
@@ -65,21 +78,19 @@ pin10 SS
 You can make a serial connection to the badge using a USB to TTL serial cable.
 For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
-### Flashing
-
-- Green wire: Connect to serial port, white TX pin 8
-- White wire: Connect to serial port, green RX pin 9
-- Black wire: Connect to Battery pin1, negative (-) port.
-- Red/Orange wire: pin14 (+)
-
-### Serial
-
 - Green wire: Connect to serial port, white SCL pin 12
 - White wire: Connect to serial port, green SCK pin 9
 - Black wire: Connect to Battery, negative (-) pin1
 - Red/Orange wire: Battery, positive (+) pin14
 
 TERM=linux minicom -D /dev/ttyUSB0
+
+## Flashing
+
+- Green wire: Connect to serial port, white TX pin 8
+- White wire: Connect to serial port, green RX pin 9
+- Black wire: Connect to Battery pin1, negative (-) port.
+- Red/Orange wire: pin14 (+)
 
 ## PlatformIO
 
@@ -93,3 +104,8 @@ in the development cycle.
 
 More information about PlatformIO Unit Testing:
 - https://docs.platformio.org/page/plus/unit-testing.html
+
+```sh
+platformio pkg install -l ArduinoNative
+platformio pkg install -l TinyWireM
+```
