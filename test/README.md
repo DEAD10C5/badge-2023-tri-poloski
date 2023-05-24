@@ -1,11 +1,30 @@
-1. move the MPU or the battery so it is easier to insert the coin cell
-2. The mounting hole is missing from the board. (1, 2, or 3 holes?)
-3. Can the chip be programmed while it is attached to the board? Depends on connections?
-4. the switch is not needed with "regular" LED. Could still be used for blink patterns?
-5. Break out all the pins from the chip from now on. That way you can still prototype
-   if there is some issue with the circuits.
+# Test
 
-we can use the "optiboot" core and program the chip using USB to serial converter.
+## Chip Setup
+
+- Install Arduino IDE.
+- Click `file -> Preferences` (on MacOS `Arduino IDE -> Settings`)
+- Add this to `Additional Boards manager URLS`: `http://drazzy.com/package_drazzy.com_index.json`
+- Click `ok`
+- Click on `Tools -> Boards Manager` (on MacOS `Tools -> Board -> Boards Manager`) and make sure
+  `ATTinyCore` is installed.
+  - Install version 1.5.2 or later.
+- Click on `Tools -> Board -> ATTinyCore` and select one of the ATTiny 441/841 board types.
+- Click on `File -> Open` and select the `test/accelerometer_test.ino file` in this repo
+- A dialog appears asking if you want to create a folder and move the file, press `OK`
+- Click on `Sketch -> Include Library -> Manage Libraries`. In the search bar, type "TinyMPU6050"
+  and click the `INSTALL` button
+- Start a build by pressing the button with the checkmark in the upper left of the window
+
+### Install Libraries
+
+- Save these zip files to the `Arduino/libraries` folder.
+  - In your home directory if using Linux.
+- Unzip them.
+- You might need to restart KiCAD.
+
+- [ATTinyCore Universal](https://github.com/SpenceKonde/ATTinyCore)
+- [TinyMPU6050](https://github.com/gabriel-milan/TinyMPU6050)
 
 ## Burn Bootloader
 
@@ -13,21 +32,6 @@ we can use the "optiboot" core and program the chip using USB to serial converte
 - Add the "Arduino AVR Boards" from board manager.
 - Upload the `src/ArduinoISP` sketch to the Arduino UNO.
 - Connect board and "get board info", you should see serial number.
-
-Pin details for ISP header:
-// By default, the hardware SPI pins MISO, MOSI and SCK are used to communicate
-// with the target. On all Arduinos, these pins can be found
-// on the ICSP/SPI header:
-//
-//               MISO °. . 5V (!) Avoid this pin on Due, Zero...
-//               SCK   . . MOSI
-//                     . . GND
-//
-// On some Arduinos (Uno,...), pins MOSI, MISO and SCK are the same pins as
-// digital pin 11, 12 and 13, respectively. That is why many tutorials instruct
-// you to hook up the target to these pins. If you find this wiring more
-// practical, have a define USE_OLD_STYLE_WIRING. This will work even when not
-// using an Uno. (On an Uno this is not needed).
 
 Choose Bootloader UART1 if you are using ISP header programming since the TX is on pin 8 and the RX is on pin 9.
 
@@ -47,15 +51,19 @@ For USB to TTL, while viewing the BACK of the board:
 Connect board, burn bootloader from board menu.
 Then you can start uploading sketches
 
-## Programming
-
-Once you burn the bootloader to the chip, you can reflash many times using the easy USB to TTL cable.
-
-[Add the ATTINY 841 using these directions](https://github.com/SpenceKonde/ATTinyCore/blob/v2.0.0-devThis-is-the-head-submit-PRs-against-this/Installation.md#boards-manager-installation)
-
-[SparkFun FT231X Breakout](https://www.sparkfun.com/products/13263)
-
 ## Serial Console
+
+You can make a serial connection to the badge using a USB to TTL serial cable.
+For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
+
+There is a six pin (2x3) header on the right side of the board when viewed from the back.
+
+| wire | description |
+| --- | --- |
+| Black GROUND wire | Connect to Battery port, negative (-) port.
+| Red/Orange POWER wire | Connect to Battery port, positive (+) port. |
+| Green wire | Connect to serial port. |
+| White wire | Connect to serial port, left side looking at back. |
 
 pin13 SCK
 pin12 MISO
@@ -65,18 +73,33 @@ pin10 SS
 You can make a serial connection to the badge using a USB to TTL serial cable.
 For example: [USB to TTL Serial Cable](https://www.adafruit.com/product/954)
 
-### Flashing
-
-- Green wire: Connect to serial port, white TX pin 8
-- White wire: Connect to serial port, green RX pin 9
-- Black wire: Connect to Battery pin1, negative (-) port.
-- Red/Orange wire: pin14 (+)
-
-### Serial
-
 - Green wire: Connect to serial port, white SCL pin 12
 - White wire: Connect to serial port, green SCK pin 9
 - Black wire: Connect to Battery, negative (-) pin1
 - Red/Orange wire: Battery, positive (+) pin14
 
 TERM=linux minicom -D /dev/ttyUSB0
+
+## Flashing
+
+- Green wire: Connect to serial port, white TX pin 8
+- White wire: Connect to serial port, green RX pin 9
+- Black wire: Connect to Battery pin1, negative (-) port.
+- Red/Orange wire: pin14 (+)
+
+## PlatformIO
+
+This directory is intended for PlatformIO Unit Testing and project tests.
+
+Unit Testing is a software testing method by which individual units of
+source code, sets of one or more MCU program modules together with associated
+control data, usage procedures, and operating procedures, are tested to
+determine whether they are fit for use. Unit testing finds problems early
+in the development cycle.
+
+- [More information about PlatformIO Unit Testing](https://docs.platformio.org/page/plus/unit-testing.html)
+
+```sh
+platformio pkg install -l ArduinoNative
+platformio pkg install -l TinyWireM
+```
