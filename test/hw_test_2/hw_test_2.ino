@@ -23,8 +23,8 @@ void setup()
 
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(0x6B);
-  Wire.write(0x00);
+  Wire.write(0x6B); //We want to write to the PWR_MGMT_1 register (6B hex).
+  // Wire.write(0x00); //enable temp sensor
   Wire.endTransmission();
 
   pinMode(BOTTOM_ROW, OUTPUT);
@@ -38,7 +38,6 @@ void loop()
   Wire.write(0x3B);
   Wire.endTransmission();
   Wire.requestFrom(MPU6050_ADDR, 14);
-
 
   int16_t gx, gy, gz;
   gx = Wire.read() << 8 | Wire.read();
@@ -64,31 +63,32 @@ void loop()
   Serial.print(", ");
   Serial.println(gz);
 
-//   Serial.print("ay: ");
-//   Serial.println(ay);
+  Serial.print("ay: ");
+  Serial.println(ay);
 
-//   if (ay < 0)
-//   {
-//     blink(BOTTOM_ROW, 5);
-//   }
-//   else if (ay > 0)
-//   {
-//     blink(TOP_ROW, 5);
-//   }
-//   else
-//   {
-//     blink(MIDDLE_ROW, 5);
-//   }
-// }
-// void blink(int row, int count)
-// {
-//   for (int x = 0; x <= count; x++)
-//   {
-//     digitalWrite(row, 1);
-//     delay(75);
-//     digitalWrite(row, 0);
-//     delay(75);
-//   }
+  if (ay < 0)
+  {
+    blink(BOTTOM_ROW, 5);
+  }
+  else if (ay > 0)
+  {
+    blink(TOP_ROW, 5);
+  }
+  else
+  {
+    blink(MIDDLE_ROW, 5); // this means zero, or some crazy undefined value
+  }
+}
+
+void blink(int row, int count)
+{
+  for (int x = 0; x <= count; x++)
+  {
+    digitalWrite(row, 1);
+    delay(75);
+    digitalWrite(row, 0);
+    delay(75);
+  }
 }
 
 /*
