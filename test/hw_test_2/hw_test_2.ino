@@ -20,12 +20,11 @@
 void setup()
 {
   Serial.begin(9600);
-
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(0x6B); //We want to write to the PWR_MGMT_1 register (6B hex).
-  // Wire.write(0x00); //enable temp sensor
-  Wire.endTransmission();
+  Wire.write(0x6B);                  // Talk to the register 6B
+  Wire.write(0x00);                  // Make reset - place a 0 into the 6B register
+  Wire.endTransmission(true);        //end the transmission
 
   pinMode(BOTTOM_ROW, OUTPUT);
   pinMode(MIDDLE_ROW, OUTPUT);
@@ -36,48 +35,27 @@ void loop()
 {
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
-  Wire.endTransmission();
-  Wire.requestFrom(MPU6050_ADDR, 14);
-
-  int16_t gx, gy, gz;
-  gx = Wire.read() << 8 | Wire.read();
-  gy = Wire.read() << 8 | Wire.read();
-  gz = Wire.read() << 8 | Wire.read();
-  
-  int16_t ax, ay, az;
-  ax = Wire.read() << 8 | Wire.read();
-  ay = Wire.read() << 8 | Wire.read();
-  az = Wire.read() << 8 | Wire.read();
-
-  Serial.print("Accelerometer: ");
-  Serial.print(ax);
-  Serial.print(", ");
-  Serial.print(ay);
-  Serial.print(", ");
-  Serial.println(az);
-
-  Serial.print("Gyroscope: ");
-  Serial.print(gx);
-  Serial.print(", ");
-  Serial.print(gy);
-  Serial.print(", ");
-  Serial.println(gz);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDR, 6, true); 
+  AccX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
+  AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
+  AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
   Serial.print("ay: ");
-  Serial.println(ay);
+  Serial.println(AccY*1000);
 
-  if (ay < 0)
-  {
-    blink(BOTTOM_ROW, 5);
-  }
-  else if (ay > 0)
-  {
-    blink(TOP_ROW, 5);
-  }
-  else
-  {
-    blink(MIDDLE_ROW, 5); // this means zero, or some crazy undefined value
-  }
+  // if (ay < 0)
+  // {
+  //   blink(BOTTOM_ROW, 5);
+  // }
+  // else if (ay > 0)
+  // {
+  //   blink(TOP_ROW, 5);
+  // }
+  // else
+  // {
+  //   blink(MIDDLE_ROW, 5); // this means zero, or some crazy undefined value
+  // }
 }
 
 void blink(int row, int count)
@@ -90,26 +68,6 @@ void blink(int row, int count)
     delay(75);
   }
 }
-
-/*
-  lights(0);
-
-  Serial.print("Accelerometer: ");
-  Serial.print(ax);
-  Serial.print(", ");
-  Serial.print(ay);
-  Serial.print(", ");
-  Serial.println(az);
-
-  Serial.print("Gyroscope: ");
-  Serial.print(gx);
-  Serial.print(", ");
-  Serial.print(gy);
-  Serial.print(", ");
-  Serial.println(gz);
-  delay(200);
-  lights(1);
-} */
 
 void lights(int x)
 {

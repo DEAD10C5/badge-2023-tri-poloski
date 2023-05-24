@@ -25,7 +25,8 @@
 //#define TX_PIN PB1 // You can specify TX_PIN here (before the line #include "ATtinySerialOut.hpp")
 //#include "ATtinySerialOut.hpp"
 
-#define MPU6050_ADDR 0x69
+#define MPU6050_ADDR 0x68
+float AccX, AccY, AccZ;
 
 const uint8_t BOTTOM_ROW = PB0;  // PB0 on pin2
 const uint8_t MIDDLE_ROW = PB1;  // PB1 on pin3
