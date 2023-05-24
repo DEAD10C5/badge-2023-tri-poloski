@@ -26,16 +26,10 @@
 //#include "ATtinySerialOut.hpp"
 
 #define MPU6050_ADDR 0x68
+float AccX, AccY, AccZ;
 
 const uint8_t BOTTOM_ROW = PB0;  // PB0 on pin2
-const uint8_t MIDDLE_ROW = PB1; //PA1;  // PB1 on pin3
+const uint8_t MIDDLE_ROW = PB1;  // PB1 on pin3
 const uint8_t TOP_ROW = PB2;     // PB2 on pin5
-
-// use this struct to get data back from MPU6050
-struct offsets {
-  float x;
-  float y;
-  float z;
-};
 
 #endif
