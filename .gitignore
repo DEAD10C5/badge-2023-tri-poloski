@@ -4,6 +4,7 @@
 kicad/adidas.xml
 test/**/html
 test/**/latex
+*.drawio.bkp
 
 # Temporary files
 \#auto_saved_files#
