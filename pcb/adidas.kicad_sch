@@ -2723,7 +2723,7 @@
     (property "Reference" "BT1" (at 225.171 144.6443 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Value" "Battery Clip" (at 222.25 148.59 0)
+    (property "Value" "монетная батарейка" (at 222.25 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "DEAD10C5:BatteryHolder_Keystone_3002_1x2032" (at 222.25 145.796 90)
