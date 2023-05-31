@@ -1,10 +1,10 @@
 (footprint "olive" (version 20230517) (generator pcbnew)
   (layer "F.Cu")
   (attr board_only exclude_from_pos_files exclude_from_bom)
-  (fp_text reference "olive" (at 0 -2.54) (layer "Cmts.User") hide (tstamp e9fddf51-d9f6-4db3-a7ea-0afa22c6d7d1)
+  (fp_text reference "G***" (at 0 -2.54) (layer "Cmts.User") hide (tstamp e9fddf51-d9f6-4db3-a7ea-0afa22c6d7d1)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (fp_text value "LOGO" (at 0.75 2.54) (layer "Cmts.User") hide (tstamp 493ec6f1-4d79-4549-9293-8dcac686a98f)
+  (fp_text value "olive" (at 0.75 2.54) (layer "Cmts.User") hide (tstamp 493ec6f1-4d79-4549-9293-8dcac686a98f)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (fp_poly
