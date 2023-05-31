@@ -10,5 +10,9 @@
 set -euo pipefail
 # IFS=$'\n\t'
 
-brew install imagemagick
-brew install ghostscript
+function setup() {
+  brew install imagemagick
+  brew install ghostscript
+}
+
+setup
