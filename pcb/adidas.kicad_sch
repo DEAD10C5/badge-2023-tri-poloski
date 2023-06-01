@@ -6,10 +6,11 @@
 
   (title_block
     (title "гопник badge")
-    (date "2023-05-11")
+    (date "2023-06-01")
     (rev "v0.3")
     (company "DE:AD:10:C5")
     (comment 1 "Русский хардбасс")
+    (comment 2 "DEFCON XXXI")
   )
 
   (lib_symbols
