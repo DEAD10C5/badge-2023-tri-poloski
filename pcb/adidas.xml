@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/fdiaz/workspace/badge-2023-tri-poloski/pcb/adidas.kicad_sch</source>
-    <date>2023 June 01, Thursday 18:01:30</date>
+    <date>2023 June 01, Thursday 18:16:46</date>
     <tool>Eeschema 7.99.0-1211-g2ac3f4cc9e</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -626,82 +626,10 @@
       <footprint>DEAD10C5:SOIC127P599X175-14N</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/268/Atmel_8495_8_bit_AVR_Microcontrollers_ATtiny441_AT-1315526.pdf</datasheet>
       <fields>
-        <field name="A1_MIN">0.1</field>
-        <field name="A_MAX">1.75</field>
-        <field name="A_MIN">1.75</field>
-        <field name="A_NOM">1.75</field>
-        <field name="B_MAX">0.5</field>
-        <field name="B_MIN">0.33</field>
-        <field name="B_NOM">0.415</field>
-        <field name="D2_MAX">0.0</field>
-        <field name="D_MAX">8.74</field>
-        <field name="D_MIN">8.55</field>
-        <field name="D_NOM">8.645</field>
-        <field name="E1_MAX">3.99</field>
-        <field name="E1_MIN">3.8</field>
-        <field name="E1_NOM">3.895</field>
-        <field name="E2_MAX">0.0</field>
-        <field name="ENOM">1.27</field>
-        <field name="E_MAX">6.19</field>
-        <field name="E_MIN">5.8</field>
-        <field name="E_NOM">5.995</field>
-        <field name="L_MAX">1.27</field>
-        <field name="L_MIN">0.41</field>
-        <field name="L_NOM">0.84</field>
         <field name="MANUFACTURER">Microchip</field>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">1.75mm</field>
-        <field name="Manufacturer">Microchip</field>
-        <field name="Mouser Part">556-ATTINY841-SSU</field>
-        <field name="PACKAGE_TYPE">SOIC-14</field>
-        <field name="PARTREV">A</field>
-        <field name="PIN_COUNT">14.0</field>
-        <field name="STANDARD">IPC 7351B</field>
       </fields>
       <libsource lib="dead10c5" part="ATTINY841-SSU" description=""/>
-      <property name="PACKAGE_TYPE" value="SOIC-14"/>
-      <property name="Manufacturer" value="Microchip"/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="1.75mm"/>
-      <property name="Mouser Part" value="556-ATTINY841-SSU"/>
-      <property name="B_NOM" value="0.415"/>
-      <property name="B_MIN" value="0.33"/>
-      <property name="D_MIN" value="8.55"/>
-      <property name="PINS" value=""/>
-      <property name="E2_MAX" value="0.0"/>
-      <property name="L1_MIN" value=""/>
-      <property name="D1_NOM" value=""/>
-      <property name="PARTREV" value="A"/>
-      <property name="A_NOM" value="1.75"/>
-      <property name="STANDARD" value="IPC 7351B"/>
-      <property name="D1_MIN" value=""/>
-      <property name="D_MAX" value="8.74"/>
-      <property name="L1_MAX" value=""/>
-      <property name="VACANCIES" value=""/>
-      <property name="E1_MAX" value="3.99"/>
-      <property name="DMIN" value=""/>
-      <property name="E1_MIN" value="3.8"/>
       <property name="MANUFACTURER" value="Microchip"/>
-      <property name="L_MAX" value="1.27"/>
-      <property name="E1_NOM" value="3.895"/>
-      <property name="E_MAX" value="6.19"/>
-      <property name="D1_MAX" value=""/>
-      <property name="DMAX" value=""/>
-      <property name="E_NOM" value="5.995"/>
-      <property name="D_NOM" value="8.645"/>
-      <property name="A_MIN" value="1.75"/>
-      <property name="B_MAX" value="0.5"/>
-      <property name="ENOM" value="1.27"/>
-      <property name="D2_MAX" value="0.0"/>
-      <property name="SNAPEDA_PACKAGE_ID" value=""/>
-      <property name="L_NOM" value="0.84"/>
-      <property name="DNOM" value=""/>
-      <property name="EMIN" value=""/>
-      <property name="A_MAX" value="1.75"/>
-      <property name="PIN_COUNT" value="14.0"/>
-      <property name="EMAX" value=""/>
-      <property name="A1_MIN" value="0.1"/>
-      <property name="E_MIN" value="5.8"/>
-      <property name="L1_NOM" value=""/>
-      <property name="L_MIN" value="0.41"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="adidas.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
