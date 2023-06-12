@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/Users/fdiaz/workspace/badge-2023-tri-poloski/pcb/adidas.kicad_sch</source>
-    <date>2023 June 01, Thursday 18:16:46</date>
+    <date>Date1</date>
     <tool>Eeschema 7.99.0-1211-g2ac3f4cc9e</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>гопник badge</title>
         <company>DE:AD:10:C5</company>
         <rev>v0.3</rev>
-        <date>2023-06-01</date>
+        <date>Date2</date>
         <source>adidas.kicad_sch</source>
         <comment number="1" value="Русский хардбасс"/>
         <comment number="2" value="DEFCON XXXI"/>
