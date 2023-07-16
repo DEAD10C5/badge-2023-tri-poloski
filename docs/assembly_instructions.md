@@ -1,8 +1,14 @@
 # Assembly
 
-- Solder a (B3F-1000 Omron Switch](https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf)
-  to the back of the board in the bottom center. The button is used to toggle between
-  light pattern modes.
+## Parts
+
+- 2 switches (need to order 400)
+- battery clips
+- batteries 
+- SAO headers
+
+## Assembly Steps
+
 - Solder a [Keystone SMT 3002 coin cell retainer](https://www.digikey.com/en/products/detail/keystone-electronics/3002/227444)
   to the back middle of the board.
 - (OPTIONAL) solder a 2×3 Pin 6 Pin With Polarizing Key. The connector should be oriented as

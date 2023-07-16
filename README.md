@@ -4,6 +4,8 @@
 
 ## Created by
 
+Будущее подпольной кибер-безопасности
+
 - Concept: Yaya Pancho
 - Translations: @muscovitebob
 - Puzzle: [Hermit](mailto:hermit@dead10c5.org)
