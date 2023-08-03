@@ -440,8 +440,11 @@
       "gencad": "Generated/Export/adidas-gencad.cad",
       "idf": "",
       "netlist": "",
+      "plot": "",
+      "pos_files": "",
       "specctra_dsn": "adidas.dsn",
       "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
