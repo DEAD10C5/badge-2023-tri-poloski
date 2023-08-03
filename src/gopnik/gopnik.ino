@@ -1,3 +1,19 @@
+/*!
+   @file gopnik.ino
+    ____  _____      _    ____    _  ___     ____ ____
+   |  _ \| ____|_   / \  |  _ \ _/ |/ _ \ _ / ___| ___|
+   | | | |  _| (_) / _ \ | | | (_) | | | (_) |   |___ \
+   | |_| | |___ _ / ___ \| |_| |_| | |_| |_| |___ ___) |
+   |____/|_____(_)_/   \_\____/(_)_|\___/(_)\____|____/
+
+  # SPDX-FileCopyrightText: 2023 DE:AD:10:C5 <polr@dead10c5.org>
+  #
+  # SPDX-License-Identifier: GPL-3.0-or-later
+  Date   : August 02, 2023
+  Version: 0.2
+
+*/
+
 #include <Arduino.h>
 #include <Wire.h>
 #define MPU6050_ADDR 0x68
@@ -77,15 +93,11 @@ void accelerometer() {
   }
 }
 
-
-
 void lights(bool b, bool m, bool t) {
   digitalWrite(LED_BOTTOM, b);
   digitalWrite(LED_MIDDLE, m);
   digitalWrite(LED_TOP, t);
 }
-
-
 
 ISR (PCINT0_vect) {
   if (digitalRead(BUTTON) == LOW) {
@@ -166,8 +178,6 @@ ISR (PCINT0_vect) {
   }
 }
 
-
-
 void rollup() {
   int del = 20;
   lights(1,0,0);
@@ -178,8 +188,6 @@ void rollup() {
   delay(del);
   lights(0,0,0);
 }
-
-
 
 void rolldown() {
   int del = 20;
@@ -192,8 +200,6 @@ void rolldown() {
   lights(0,0,0);
 }
 
-
-
 void flash() {
   int del = 10;
   lights(1,1,1);
@@ -201,8 +207,6 @@ void flash() {
   lights(0,0,0);
   delay(del);
 }
-
-
 
 void flashyrollup() {
   int del = 10;
@@ -226,8 +230,6 @@ void flashyrollup() {
   }
 }
 
-
-
 void flashyrolldown() {
   int del = 10;
   for (int counter = 0; counter < 4; counter++) {
@@ -250,8 +252,6 @@ void flashyrolldown() {
   }
 }
 
-
-
 void alternate() {
   int del = 30;
   lights(1,0,1);
@@ -259,8 +259,6 @@ void alternate() {
   lights(0,1,0);
   delay(del);
 }
-
-
 
 void loop()
 {
