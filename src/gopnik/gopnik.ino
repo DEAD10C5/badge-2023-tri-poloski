@@ -14,20 +14,7 @@
 
 */
 
-#include <Arduino.h>
-#include <Wire.h>
-#define MPU6050_ADDR 0x68
-//#define MPU6050_ADDR 0x69
-
-
-float AccX, AccY, AccZ, MAccX, MAccY, MAccZ;
-volatile int mode = 0;
-const byte LED_BOTTOM = 10; //PB0 - Bottom
-const byte LED_MIDDLE = 9; //PB1 - Middle
-const byte LED_TOP = 8; //PB2 - Top
-const byte BUTTON = 0; //PA0 - PCINT0
-
-
+#include "dead10c5.h"
 
 void setup() {
 
