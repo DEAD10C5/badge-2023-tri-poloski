@@ -55,8 +55,10 @@ void accelerometer() {
   AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
   AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
+  // orient ourselves WRT (0,0,0)
+  // Acc is current reading, MAcc is negative saved values
   if (AccX < 0) {
-    MAccX = abs(AccX);
+    MAccX = abs(AccX); 
     AccX = 0;
   }
   else {
@@ -91,7 +93,7 @@ ISR (PCINT0_vect) {
     
     accelerometer();
 
-    //Positive X Wins
+    // Positive X Wins
     if (
       AccX > MAccX
       && AccX > AccY
@@ -103,7 +105,7 @@ ISR (PCINT0_vect) {
       mode = 0;
     }
 
-    //Negative X Wins
+    // Negative X Wins
     else if (
       MAccX > AccX
       && MAccX > AccY
@@ -115,7 +117,7 @@ ISR (PCINT0_vect) {
       mode = 1;
     }
 
-    //Positive Y Wins
+    // Positive Y Wins
     else if (
       AccY > MAccY
       && AccY > AccX
@@ -127,7 +129,7 @@ ISR (PCINT0_vect) {
       mode = 2;
     }
 
-    //Negative Y Wins
+    // Negative Y Wins
     else if (
       MAccY > AccY
       && MAccY > AccX
@@ -139,7 +141,7 @@ ISR (PCINT0_vect) {
       mode = 3;
     }
 
-    //Positive Z Wins
+    // Positive Z Wins
     else if (
       AccZ > MAccZ
       && AccZ > AccX
@@ -151,7 +153,7 @@ ISR (PCINT0_vect) {
       mode = 4;
     }
 
-    //Negative Z Wins
+    // Negative Z Wins
     else if (
       MAccZ > AccZ
       && MAccZ > AccX
