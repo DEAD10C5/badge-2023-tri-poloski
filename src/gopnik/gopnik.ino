@@ -53,6 +53,9 @@ void accelerometer() {
   AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
   AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
+  Serial.print("ay: ");
+  Serial.println(AccY*1000);
+
   // orient ourselves WRT (0,0,0)
   // Acc is current reading, MAcc is negative saved values
   if (AccX < 0) {
@@ -86,10 +89,12 @@ void lights(bool b, bool m, bool t) {
   digitalWrite(LED_TOP, t);
 }
 
+/* watching this interrupt to change mode if they are
+moving the badge around the space time contiuum */
 ISR (PCINT0_vect) {
   if (digitalRead(BUTTON) == LOW) {
     
-    accelerometer();
+    accelerometer(); // call to see where we are
 
     // Positive X Wins
     if (
@@ -247,28 +252,23 @@ void alternate() {
   delay(del);
 }
 
-void loop()
-{
-  
-  if (mode == 0) {
-    rollup();
-  }
-  else if (mode == 1) {
-    rolldown();
-  }
-  else if (mode == 2) {
-    flash();
-  }
-  else if (mode == 3) {
-    flashyrollup();
-  }
-  else if (mode == 4) {
-    flashyrolldown();
-  }
-  else if (mode == 5) {
-    alternate();
-  }
+void loop() {
 
+  // this is the default mode
+  // if (mode == 0) {
+  //   rollup();
+  // } else if (mode == 1) {
+  //   rolldown();
+  // } else if (mode == 2) {
+  //   flash();
+  // } else if (mode == 3) {
+  //   flashyrollup();
+  // } else if (mode == 4) {
+  //   flashyrolldown();
+  // } else if (mode == 5) {
+  //   alternate();
+  // }
   Serial.print("ay: ");
   Serial.println(AccY*1000);
+  rollup();
 }
