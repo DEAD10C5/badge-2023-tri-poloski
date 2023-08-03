@@ -17,7 +17,7 @@
 #include "dead10c5.h"
 
 void setup() {
-
+  Serial.begin(9600);
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B); // Talk to the register 6B
@@ -43,8 +43,6 @@ void setup() {
   delay(30);
   lights(0,0,0);
 }
-
-
 
 void accelerometer() {
   Wire.beginTransmission(MPU6050_ADDR);
@@ -270,4 +268,7 @@ void loop()
   else if (mode == 5) {
     alternate();
   }
+
+  Serial.print("ay: ");
+  Serial.println(AccY*1000);
 }

@@ -26,6 +26,7 @@
 //#include "ATtinySerialOut.hpp"
 
 #define MPU6050_ADDR 0x68
+
 float AccX, AccY, AccZ;
 
 const uint8_t BOTTOM_ROW = PB0;  // PB0 on pin2
