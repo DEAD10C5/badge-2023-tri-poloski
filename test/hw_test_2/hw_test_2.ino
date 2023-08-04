@@ -19,7 +19,7 @@
 
 void setup()
 {
-  Serial.begin(15200);
+  Serial.begin(9600);
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B);           // Talk to the register 6B
@@ -37,26 +37,26 @@ void loop()
   Wire.write(0x3B);
   Wire.endTransmission(false);
   Wire.requestFrom(MPU6050_ADDR, 6, true);
+  
   AccX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
   AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
   AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
-  Serial.print("ay: ");
-  Serial.println(AccY * 1000);
+  Serial.print("testing: ");
+  Serial.println(AccY * 5000);
 
-  blink(LED_BOTTOM, 5);
-  
-  if (AccY < 0)
+  if (mode > 0) 
   {
     blink(LED_BOTTOM, 5);
   }
-  else if (AccY > 0)
+
+  if (AccY > 0)
   {
-    blink(LED_TOP, 5);
+    blink(LED_MIDDLE, 5);
   }
   else
   {
-    blink(LED_MIDDLE, 5); // this means zero, or some crazy undefined value
+    blink(LED_TOP, 5);
   }
 }
 
@@ -81,11 +81,10 @@ void lights(int x)
 
 /* watching this interrupt to change mode if they are
 moving the badge around the space time contiuum */
-// ISR(PCINT0_vect)
-// {
-//   if (digitalRead(BUTTON) == LOW)
-//   {
-//     Serial.print("franklin ay: ");
-//     Serial.println(AccY * 1000);
-//   }
-// }
+ISR(PCINT0_vect)
+{
+  if (digitalRead(BUTTON) == LOW)
+  {
+    mode = mode + 1;
+  }
+}

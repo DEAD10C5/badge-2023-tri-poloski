@@ -34,4 +34,6 @@ const byte LED_MIDDLE = 9;  // PB1 on pin3
 const byte LED_TOP = 8;     // PB2 on pin5
 const byte BUTTON = 0;      // PA0 - PCINT0
 
+int mode = 0;
+
 #endif
