@@ -35,14 +35,9 @@ float AccX, AccY, AccZ, MAccX, MAccY, MAccZ;
 
 volatile int mode = 0;
 
-const uint8_t LED_BOTTOM = PB0;  // PB0 on pin2
-const uint8_t LED_MIDDLE = PB1;  // PB1 on pin3
-const uint8_t LED_TOP = PB2;     // PB2 on pin5
-
-// const byte LED_BOTTOM = 10; // PB0 - Bottom
-// const byte LED_MIDDLE = 9; // PB1 - Middle
-// const byte LED_TOP = 8; // PB2 - Top
-
-const byte BUTTON = 0; //PA0 - PCINT0
+const byte LED_BOTTOM = 10; // PB0 on pin2
+const byte LED_MIDDLE = 9;  // PB1 on pin3
+const byte LED_TOP = 8;     // PB2 on pin5
+const byte BUTTON = 0;      // PA0 - PCINT0
 
 #endif  // SRC_GOPNIK_DEAD10C5_H_

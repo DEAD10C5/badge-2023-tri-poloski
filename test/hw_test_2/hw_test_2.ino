@@ -19,16 +19,16 @@
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(15200);
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(0x6B);                  // Talk to the register 6B
-  Wire.write(0x00);                  // Make reset - place a 0 into the 6B register
-  Wire.endTransmission(true);        //end the transmission
+  Wire.write(0x6B);           // Talk to the register 6B
+  Wire.write(0x00);           // Make reset - place a 0 into the 6B register
+  Wire.endTransmission(true); // end the transmission
 
-  pinMode(BOTTOM_ROW, OUTPUT);
-  pinMode(MIDDLE_ROW, OUTPUT);
-  pinMode(TOP_ROW, OUTPUT);
+  pinMode(LED_BOTTOM, OUTPUT);
+  pinMode(LED_MIDDLE, OUTPUT);
+  pinMode(LED_TOP, OUTPUT);
 }
 
 void loop()
@@ -36,26 +36,28 @@ void loop()
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDR, 6, true); 
+  Wire.requestFrom(MPU6050_ADDR, 6, true);
   AccX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
   AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
   AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
   Serial.print("ay: ");
-  Serial.println(AccY*1000);
+  Serial.println(AccY * 1000);
 
-  // if (ay < 0)
-  // {
-  //   blink(BOTTOM_ROW, 5);
-  // }
-  // else if (ay > 0)
-  // {
-  //   blink(TOP_ROW, 5);
-  // }
-  // else
-  // {
-  //   blink(MIDDLE_ROW, 5); // this means zero, or some crazy undefined value
-  // }
+  blink(LED_BOTTOM, 5);
+  
+  if (AccY < 0)
+  {
+    blink(LED_BOTTOM, 5);
+  }
+  else if (AccY > 0)
+  {
+    blink(LED_TOP, 5);
+  }
+  else
+  {
+    blink(LED_MIDDLE, 5); // this means zero, or some crazy undefined value
+  }
 }
 
 void blink(int row, int count)
@@ -71,8 +73,19 @@ void blink(int row, int count)
 
 void lights(int x)
 {
-  digitalWrite(BOTTOM_ROW, x);
-  digitalWrite(MIDDLE_ROW, x);
-  digitalWrite(TOP_ROW, x);
+  digitalWrite(LED_BOTTOM, x);
+  digitalWrite(LED_MIDDLE, x);
+  digitalWrite(LED_TOP, x);
   delay(50);
 }
+
+/* watching this interrupt to change mode if they are
+moving the badge around the space time contiuum */
+// ISR(PCINT0_vect)
+// {
+//   if (digitalRead(BUTTON) == LOW)
+//   {
+//     Serial.print("franklin ay: ");
+//     Serial.println(AccY * 1000);
+//   }
+// }
