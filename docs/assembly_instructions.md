@@ -16,6 +16,6 @@
 
 ## Flashing
 
-* [SparkFun AVR Pocket Programmer](https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide/all)
-* Set "Tools -> Programmer" to "USBtinyASP (FAST)"
-* Means you don't need a boot loader. Saves some memory.
+- [SparkFun AVR Pocket Programmer](https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide/all)
+- Set "Tools -> Programmer" to "USBtinyASP (FAST)"
+- Means you don't need a boot loader. Saves some memory.
