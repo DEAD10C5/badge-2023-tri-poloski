@@ -14,23 +14,10 @@
 
 */
 
-#include <Arduino.h>
-#include <Wire.h>
-#define MPU6050_ADDR 0x68
-//#define MPU6050_ADDR 0x69
-
-
-float AccX, AccY, AccZ, MAccX, MAccY, MAccZ;
-volatile int mode = 0;
-const byte LED_BOTTOM = 10; //PB0 - Bottom
-const byte LED_MIDDLE = 9; //PB1 - Middle
-const byte LED_TOP = 8; //PB2 - Top
-const byte BUTTON = 0; //PA0 - PCINT0
-
-
+#include "dead10c5.h"
 
 void setup() {
-
+  Serial.begin(9600);
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B); // Talk to the register 6B
@@ -57,19 +44,23 @@ void setup() {
   lights(0,0,0);
 }
 
-
-
 void accelerometer() {
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDR, 6, true); 
+  Wire.requestFrom(MPU6050_ADDR, 6, true);
+  
   AccX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
   AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
   AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
 
+  Serial.print("ay: ");
+  Serial.println(AccY*1000);
+
+  // orient ourselves WRT (0,0,0)
+  // Acc is current reading, MAcc is negative saved values
   if (AccX < 0) {
-    MAccX = abs(AccX);
+    MAccX = abs(AccX); 
     AccX = 0;
   }
   else {
@@ -99,12 +90,14 @@ void lights(bool b, bool m, bool t) {
   digitalWrite(LED_TOP, t);
 }
 
+/* watching this interrupt to change mode if they are
+moving the badge around the space time contiuum */
 ISR (PCINT0_vect) {
   if (digitalRead(BUTTON) == LOW) {
     
-    accelerometer();
+    accelerometer(); // call to see where we are
 
-    //Positive X Wins
+    // Positive X Wins
     if (
       AccX > MAccX
       && AccX > AccY
@@ -116,7 +109,7 @@ ISR (PCINT0_vect) {
       mode = 0;
     }
 
-    //Negative X Wins
+    // Negative X Wins
     else if (
       MAccX > AccX
       && MAccX > AccY
@@ -128,7 +121,7 @@ ISR (PCINT0_vect) {
       mode = 1;
     }
 
-    //Positive Y Wins
+    // Positive Y Wins
     else if (
       AccY > MAccY
       && AccY > AccX
@@ -140,7 +133,7 @@ ISR (PCINT0_vect) {
       mode = 2;
     }
 
-    //Negative Y Wins
+    // Negative Y Wins
     else if (
       MAccY > AccY
       && MAccY > AccX
@@ -152,7 +145,7 @@ ISR (PCINT0_vect) {
       mode = 3;
     }
 
-    //Positive Z Wins
+    // Positive Z Wins
     else if (
       AccZ > MAccZ
       && AccZ > AccX
@@ -164,7 +157,7 @@ ISR (PCINT0_vect) {
       mode = 4;
     }
 
-    //Negative Z Wins
+    // Negative Z Wins
     else if (
       MAccZ > AccZ
       && MAccZ > AccX
@@ -260,25 +253,23 @@ void alternate() {
   delay(del);
 }
 
-void loop()
-{
-  
-  if (mode == 0) {
-    rollup();
-  }
-  else if (mode == 1) {
-    rolldown();
-  }
-  else if (mode == 2) {
-    flash();
-  }
-  else if (mode == 3) {
-    flashyrollup();
-  }
-  else if (mode == 4) {
-    flashyrolldown();
-  }
-  else if (mode == 5) {
-    alternate();
-  }
+void loop() {
+
+  // this is the default mode
+  // if (mode == 0) {
+  //   rollup();
+  // } else if (mode == 1) {
+  //   rolldown();
+  // } else if (mode == 2) {
+  //   flash();
+  // } else if (mode == 3) {
+  //   flashyrollup();
+  // } else if (mode == 4) {
+  //   flashyrolldown();
+  // } else if (mode == 5) {
+  //   alternate();
+  // }
+  Serial.print("ay: ");
+  Serial.println(AccY*1000);
+  rollup();
 }
