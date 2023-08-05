@@ -16,75 +16,59 @@
 
 #include "dead10c5.h"
 
-void setup() {
-  Serial.begin(9600);
+void setup()
+{
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(0x6B); // Talk to the register 6B
-  Wire.write(0x00); // Make reset - place a 0 into the 6B register
-  Wire.endTransmission(true); //end the transmission
+  Wire.write(0x6B);           // Talk to the register 6B
+  Wire.write(0);              // Make reset - place a 0 into the 6B register
+  Wire.endTransmission(true); // end the transmission
 
-  //LED Pins
+  // LED Pins
   pinMode(LED_BOTTOM, OUTPUT);
   pinMode(LED_MIDDLE, OUTPUT);
   pinMode(LED_TOP, OUTPUT);
 
-  //Button Pin
+  // Button Pin
   pinMode(BUTTON, INPUT);
 
-  //Set up the interrupt
+  // Set up the interrupt
   cli();
   PCMSK0 |= (1 << PCINT0);
   GIMSK |= (1 << PCIE0);
   sei();
 
-  //Flash the lights so we know setup is done
-  lights(1,1,1);
-  delay(30);
-  lights(0,0,0);
+  // Flash the lights so we know setup is done
+  lights(1, 1, 1);
+  delay(3);
+  lights(0, 0, 0);
 }
 
-void accelerometer() {
+void accelerometer()
+{
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDR, 6, true);
-  
-  AccX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
-  AccY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
-  AccZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
+  Wire.requestFrom(MPU6050_ADDR, 14, true);
 
-  Serial.print("ay: ");
-  Serial.println(AccY*1000);
+  // AccelX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
+  AccelX = Wire.read() << 8 | Wire.read();
+  // AccelY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
+  AccelY = Wire.read() << 8 | Wire.read();
+  // AccelZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
+  AccelZ = Wire.read() << 8 | Wire.read();
 
-  // orient ourselves WRT (0,0,0)
-  // Acc is current reading, MAcc is negative saved values
-  if (AccX < 0) {
-    MAccX = abs(AccX); 
-    AccX = 0;
-  }
-  else {
-    MAccX = 0;
-  }
+  Temp = Wire.read() << 8 | Wire.read(); // 0x41 (TEMP_OUT_H) & 0x42 (TEMP_OUT_L)
 
-  if (AccY < 0) {
-    MAccY = abs(AccY);
-    AccY = 0;
-  }
-  else {
-    MAccY = 0;
-  }
+  GyroX = Wire.read() << 8 | Wire.read(); // 0x43 (GYRO_XOUT_H) & 0x44 (GYRO_XOUT_L)
+  GyroY = Wire.read() << 8 | Wire.read(); // 0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
+  GyroZ = Wire.read() << 8 | Wire.read(); // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
 
-  if (AccZ < 0) {
-    MAccZ = abs(AccZ);
-    AccZ = 0;
-  }
-  else {
-    MAccZ = 0;
-  }
+  // Serial.print(Tmp/340.00+36.53);  //equation for temperature in degrees C from datasheet
 }
 
-void lights(bool b, bool m, bool t) {
+void lights(bool b, bool m, bool t)
+{
   digitalWrite(LED_BOTTOM, b);
   digitalWrite(LED_MIDDLE, m);
   digitalWrite(LED_TOP, t);
@@ -92,184 +76,144 @@ void lights(bool b, bool m, bool t) {
 
 /* watching this interrupt to change mode if they are
 moving the badge around the space time contiuum */
-ISR (PCINT0_vect) {
-  if (digitalRead(BUTTON) == LOW) {
-    
-    accelerometer(); // call to see where we are
-
-    // Positive X Wins
-    if (
-      AccX > MAccX
-      && AccX > AccY
-      && AccX > MAccY
-      && AccX > AccZ
-      && AccX > MAccZ
-    ) {
-      lights(0, 0, 1);
-      mode = 0;
-    }
-
-    // Negative X Wins
-    else if (
-      MAccX > AccX
-      && MAccX > AccY
-      && MAccX > MAccY
-      && MAccX > AccZ
-      && MAccX > MAccZ
-    ) {
-      lights(0, 1, 0);
-      mode = 1;
-    }
-
-    // Positive Y Wins
-    else if (
-      AccY > MAccY
-      && AccY > AccX
-      && AccY > MAccX
-      && AccY > AccZ
-      && AccY > MAccZ
-    ) {
-      lights(0, 1, 1);
-      mode = 2;
-    }
-
-    // Negative Y Wins
-    else if (
-      MAccY > AccY
-      && MAccY > AccX
-      && MAccY > MAccX
-      && MAccY > AccZ
-      && MAccY > MAccZ
-    ) {
-      lights(1, 0, 0);
-      mode = 3;
-    }
-
-    // Positive Z Wins
-    else if (
-      AccZ > MAccZ
-      && AccZ > AccX
-      && AccZ > MAccX
-      && AccZ > AccY
-      && AccZ > MAccY
-    ) {
-      lights(1, 0, 1);
-      mode = 4;
-    }
-
-    // Negative Z Wins
-    else if (
-      MAccZ > AccZ
-      && MAccZ > AccX
-      && MAccZ > MAccX
-      && MAccZ > AccY
-      && MAccZ > MAccY
-    ) {
-      lights(1, 1, 0);
-      mode = 5;
-    }
+ISR(PCINT0_vect)
+{
+  if (digitalRead(BUTTON) == LOW)
+  {
+    set_mode();
   }
 }
 
-void rollup() {
+void set_mode()
+{
+  accelerometer();
+  mode = mode + 1;
+  if (mode > 5)
+  {
+    mode = 0;
+  }
+}
+
+void rollup()
+{
   int del = 20;
-  lights(1,0,0);
+  lights(1, 0, 0);
   delay(del);
-  lights(0,1,0);
+  lights(0, 1, 0);
   delay(del);
-  lights(0,0,1);
+  lights(0, 0, 1);
   delay(del);
-  lights(0,0,0);
+  lights(0, 0, 0);
 }
 
-void rolldown() {
+void rolldown()
+{
   int del = 20;
-  lights(0,0,1);
+  lights(0, 0, 1);
   delay(del);
-  lights(0,1,0);
+  lights(0, 1, 0);
   delay(del);
-  lights(1,0,0);
+  lights(1, 0, 0);
   delay(del);
-  lights(0,0,0);
+  lights(0, 0, 0);
 }
 
-void flash() {
+void flash()
+{
   int del = 10;
-  lights(1,1,1);
+  lights(1, 1, 1);
   delay(del);
-  lights(0,0,0);
+  lights(0, 0, 0);
   delay(del);
 }
 
-void flashyrollup() {
+void flashyrollup()
+{
   int del = 10;
-  for (int counter = 0; counter < 4; counter++) {
-    lights(1,0,0);
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(1, 0, 0);
     delay(del);
-    lights(0,0,0);
-    delay(del);
-  }
-  for (int counter = 0; counter < 4; counter++) {
-    lights(0,1,0);
-    delay(del);
-    lights(0,0,0);
+    lights(0, 0, 0);
     delay(del);
   }
-  for (int counter = 0; counter < 4; counter++) {
-    lights(0,0,1);
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(0, 1, 0);
     delay(del);
-    lights(0,0,0);
+    lights(0, 0, 0);
+    delay(del);
+  }
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(0, 0, 1);
+    delay(del);
+    lights(0, 0, 0);
     delay(del);
   }
 }
 
-void flashyrolldown() {
+void flashyrolldown()
+{
   int del = 10;
-  for (int counter = 0; counter < 4; counter++) {
-    lights(0,0,1);
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(0, 0, 1);
     delay(del);
-    lights(0,0,0);
-    delay(del);
-  }
-  for (int counter = 0; counter < 4; counter++) {
-    lights(0,1,0);
-    delay(del);
-    lights(0,0,0);
+    lights(0, 0, 0);
     delay(del);
   }
-  for (int counter = 0; counter < 4; counter++) {
-    lights(1,0,0);
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(0, 1, 0);
     delay(del);
-    lights(0,0,0);
+    lights(0, 0, 0);
+    delay(del);
+  }
+  for (int counter = 0; counter < 4; counter++)
+  {
+    lights(1, 0, 0);
+    delay(del);
+    lights(0, 0, 0);
     delay(del);
   }
 }
 
-void alternate() {
+void alternate()
+{
   int del = 30;
-  lights(1,0,1);
+  lights(1, 0, 1);
   delay(del);
-  lights(0,1,0);
+  lights(0, 1, 0);
   delay(del);
 }
 
-void loop() {
+void loop()
+{
 
   // this is the default mode
-  // if (mode == 0) {
-  //   rollup();
-  // } else if (mode == 1) {
-  //   rolldown();
-  // } else if (mode == 2) {
-  //   flash();
-  // } else if (mode == 3) {
-  //   flashyrollup();
-  // } else if (mode == 4) {
-  //   flashyrolldown();
-  // } else if (mode == 5) {
-  //   alternate();
-  // }
-  Serial.print("ay: ");
-  Serial.println(AccY*1000);
-  rollup();
+  if (mode == 0)
+  {
+    rollup();
+  }
+  else if (mode == 1)
+  {
+    rolldown();
+  }
+  else if (mode == 2)
+  {
+    flash();
+  }
+  else if (mode == 3)
+  {
+    flashyrollup();
+  }
+  else if (mode == 4)
+  {
+    flashyrolldown();
+  }
+  else if (mode == 5)
+  {
+    alternate();
+  }
 }
