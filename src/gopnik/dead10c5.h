@@ -32,6 +32,8 @@
 #define MPU6050_ADDR 0x68
 
 float AccelX, AccelY, AccelZ, Temp, GyroX, GyroY, GyroZ;
+__INT16_TYPE__ accelYraw;
+bool bot, mid, top;
 
 const byte LED_BOTTOM = 10; // PB0 on pin2
 const byte LED_MIDDLE = 9;  // PB1 on pin3

@@ -19,10 +19,15 @@
 void setup()
 {
   Wire.begin();
+  // Wire.setClock(400000L); //increase I2C speed to 400 khz 
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B);           // Talk to the register 6B
   Wire.write(0);              // Make reset - place a 0 into the 6B register
   Wire.endTransmission(true); // end the transmission
+  // Wire.beginTransmission(MPU6050_ADDR);
+  // Wire.write(0x19);           // SMPLRT register
+  // Wire.write(0);              // 1khz data rate
+  // Wire.endTransmission(true); // end the transmission
 
   // LED Pins
   pinMode(LED_BOTTOM, OUTPUT);
@@ -46,23 +51,59 @@ void setup()
 
 void accelerometer()
 {
+  int del = 20;
   Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(0x3B);
+  Wire.write(0x3D); //changed to 3D to read y --> old // Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDR, 14, true);
-
+  Wire.requestFrom(MPU6050_ADDR, 2, true); //was 6
+  // Wire.read()<<8|Wire.read(); //read X into _
   // AccelX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
-  AccelX = Wire.read() << 8 | Wire.read();
+  // AccelX = Wire.read() << 8 | Wire.read();
   // AccelY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
-  AccelY = Wire.read() << 8 | Wire.read();
+  // AccelY = Wire.read() << 8 | Wire.read();
+  accelYraw = Wire.read()<<8|Wire.read();
+  __INT16_TYPE__ secondYraw = Wire.read()<<8|Wire.read();
+  __INT16_TYPE__ dif = accelYraw - secondYraw;
+
+  Wire.beginTransmission(MPU6050_ADDR);
+  Wire.write(0x3D); //changed to 3D to read y --> old // Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDR, 2, true); //was 6
+  // Wire.read()<<8|Wire.read(); //read X into _
+  // AccelX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
+  // AccelX = Wire.read() << 8 | Wire.read();
+  // AccelY = (Wire.read() << 8 | Wire.read()) / 16384.0; // Y-axis value
+  // AccelY = Wire.read() << 8 | Wire.read();
+  accelYraw = Wire.read()<<8|Wire.read();
+  // AccelY = (float) accelYraw / 16384.0;
+  // Wire.read()<<8|Wire.read();
+  // Wire.read()<<8|Wire.read();
+  // Wire.read()<<8|Wire.read();
+  // Wire.read()<<8|Wire.read();
+  // Wire.read()<<8|Wire.read(); //read the rest into _ to see if this flushes the buffer since its 14 wide
+  if (accelYraw && 1){
+    bot = true;
+    mid = false;
+    top = false;
+  } else if (accelYraw && 3){
+    bot = false;
+    mid = false;
+    top = true;
+  } else {
+    bot = false;
+    mid = true;
+    top = false;
+  }
+  lights(bot,mid,top);
+  // delay(del);
   // AccelZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
-  AccelZ = Wire.read() << 8 | Wire.read();
+  // AccelZ = Wire.read() << 8 | Wire.read();
 
-  Temp = Wire.read() << 8 | Wire.read(); // 0x41 (TEMP_OUT_H) & 0x42 (TEMP_OUT_L)
+  // Temp = Wire.read() << 8 | Wire.read(); // 0x41 (TEMP_OUT_H) & 0x42 (TEMP_OUT_L)
 
-  GyroX = Wire.read() << 8 | Wire.read(); // 0x43 (GYRO_XOUT_H) & 0x44 (GYRO_XOUT_L)
-  GyroY = Wire.read() << 8 | Wire.read(); // 0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
-  GyroZ = Wire.read() << 8 | Wire.read(); // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
+  //GyroX = Wire.read() << 8 | Wire.read(); // 0x43 (GYRO_XOUT_H) & 0x44 (GYRO_XOUT_L)
+  //GyroY = Wire.read() << 8 | Wire.read(); // 0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
+  //GyroZ = Wire.read() << 8 | Wire.read(); // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
 
   // Serial.print(Tmp/340.00+36.53);  //equation for temperature in degrees C from datasheet
 }
@@ -86,7 +127,6 @@ ISR(PCINT0_vect)
 
 void set_mode()
 {
-  accelerometer();
   mode = mode + 1;
   if (mode > 5)
   {
@@ -216,4 +256,9 @@ void loop()
   {
     alternate();
   }
+  else if (mode == 6)
+  {
+    accelerometer();
+  }
 }
+ 

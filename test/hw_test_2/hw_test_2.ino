@@ -19,10 +19,11 @@
 
 void read_mpu()
 {
+  Wire.setClock(500000L);
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU6050_ADDR, 14, true);
+  Wire.requestFrom(MPU6050_ADDR, 6, true); // set to 14 if you want Temp, GyroX/Y/Z
 
   // AccelX = (Wire.read() << 8 | Wire.read()) / 16384.0; // X-axis value
   AccelX = Wire.read() << 8 | Wire.read();
@@ -31,11 +32,11 @@ void read_mpu()
   // AccelZ = (Wire.read() << 8 | Wire.read()) / 16384.0; // Z-axis value
   AccelZ = Wire.read() << 8 | Wire.read();
 
-  Temp = Wire.read() << 8 | Wire.read(); // 0x41 (TEMP_OUT_H) & 0x42 (TEMP_OUT_L)
+  // Temp = Wire.read() << 8 | Wire.read(); // 0x41 (TEMP_OUT_H) & 0x42 (TEMP_OUT_L)
   
-  GyroX = Wire.read() << 8 | Wire.read(); // 0x43 (GYRO_XOUT_H) & 0x44 (GYRO_XOUT_L)
-  GyroY = Wire.read() << 8 | Wire.read(); // 0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
-  GyroZ = Wire.read() << 8 | Wire.read(); // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
+  // GyroX = Wire.read() << 8 | Wire.read(); // 0x43 (GYRO_XOUT_H) & 0x44 (GYRO_XOUT_L)
+  // GyroY = Wire.read() << 8 | Wire.read(); // 0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
+  // GyroZ = Wire.read() << 8 | Wire.read(); // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
 
   // Serial.print(Tmp/340.00+36.53);  //equation for temperature in degrees C from datasheet
 }
@@ -54,6 +55,7 @@ void blink(int row, int count)
 // toggle the lights
 void lights(int x)
 {
+  // validate if x is either 0 or 1
   digitalWrite(LED_BOTTOM, x);
   digitalWrite(LED_MIDDLE, x);
   digitalWrite(LED_TOP, x);
@@ -71,6 +73,7 @@ ISR(PCINT0_vect)
 
 void setup()
 {
+  Wire.setClock(500000L);
   Wire.begin();
   Wire.beginTransmission(MPU6050_ADDR);
   Wire.write(0x6B);           // Talk to the register 6B
@@ -80,6 +83,8 @@ void setup()
   pinMode(LED_BOTTOM, OUTPUT);
   pinMode(LED_MIDDLE, OUTPUT);
   pinMode(LED_TOP, OUTPUT);
+
+  pinMode(BUTTON,INPUT_PULLUP); 
 
   //Set up the interrupt
   cli();
