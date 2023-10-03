@@ -31,13 +31,16 @@
 
 #define MPU6050_ADDR 0x68
 
-float AccX, AccY, AccZ, MAccX, MAccY, MAccZ;
-
-volatile int mode = 0;
+float AccelX, AccelY, AccelZ, Temp, GyroX, GyroY, GyroZ;
+__INT16_TYPE__ accelYraw;
+bool bot, mid, top;
 
 const byte LED_BOTTOM = 10; // PB0 on pin2
 const byte LED_MIDDLE = 9;  // PB1 on pin3
 const byte LED_TOP = 8;     // PB2 on pin5
 const byte BUTTON = 0;      // PA0 - PCINT0
+
+volatile int mode = 0;
+void set_mode();
 
 #endif  // SRC_GOPNIK_DEAD10C5_H_

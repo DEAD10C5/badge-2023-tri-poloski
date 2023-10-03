@@ -27,13 +27,17 @@
 
 #define MPU6050_ADDR 0x68
 
-float AccX, AccY, AccZ;
+float AccelX, AccelY, AccelZ, Temp, GyroX, GyroY, GyroZ;
 
 const byte LED_BOTTOM = 10; // PB0 on pin2
 const byte LED_MIDDLE = 9;  // PB1 on pin3
 const byte LED_TOP = 8;     // PB2 on pin5
 const byte BUTTON = 0;      // PA0 - PCINT0
 
-int mode = 1;
+volatile int mode = 0;
+
+void read_mpu();
+void blink(int, int);
+void lights(int);
 
 #endif
