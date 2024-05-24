@@ -21,4 +21,3 @@
 ![хардбасc.jpg](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/images/хардбасc.jpg)
 
 ![ТРИ-ПОЛОСКИ](https://github.com/DEAD10C5/badge-2023-tri-poloski/blob/main/images/ТРИ_ПОЛОСКИ.jpg)
-
